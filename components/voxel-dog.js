@@ -5,14 +5,14 @@ import { loadGLTFModel } from '../lib/model'
 import { DogSpinner, DogContainer } from './voxel-dog-loader'
 
 function easeOutCirc(x) {
-  return Math.sqrt(1 - Math.pow(x - 1, 4))
+  return Math.sqrt(1 - Math.pow(x - 1, 3))
 }
 
 const VoxelDog = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
   const refRenderer = useRef()
-  const urlDogGLB = (process.env.NODE_ENV === 'production' ? 'https://craftzdog.global.ssl.fastly.net/homepage' : '') + '/dog.glb'
+  const urlDogGLB = '/bat_man.glb'
 
   const handleWindowResize = useCallback(() => {
     const { current: renderer } = refRenderer
@@ -45,21 +45,20 @@ const VoxelDog = () => {
 
       const target = new THREE.Vector3(-0.5, 1.2, 0)
       const initialCameraPosition = new THREE.Vector3(
-        20 * Math.sin(0.2 * Math.PI),
+        20 * Math.sin(1 * Math.PI),
         10,
-        20 * Math.cos(0.2 * Math.PI)
+        20 * Math.cos(1 * Math.PI)
       )
 
-      // 640 -> 240
-      // 8   -> 6
-      const scale = scH * 0.005 + 4.8
+      // Initial 3d size
+      const scale = scH * 0.005 + 2
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
         scale,
         -scale,
-        0.01,
-        50000
+        0.1,
+        20000
       )
       camera.position.copy(initialCameraPosition)
       camera.lookAt(target)

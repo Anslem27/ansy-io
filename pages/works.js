@@ -1,19 +1,13 @@
-import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Divider, Link } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
-
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
-import thumbWalknote from '../public/images/works/walknote_eyecatch.png'
-import thumbFourPainters from '../public/images/works/the-four-painters_eyecatch.jpg'
-import thumbMenkiki from '../public/images/works/menkiki_eyecatch.png'
-import thumbMargelo from '../public/images/works/margelo_eyecatch.png'
-import thumbModeTokyo from '../public/images/works/modetokyo_eyecatch.png'
-import thumbStyly from '../public/images/works/styly_eyecatch.png'
-import thumbPichu2 from '../public/images/works/pichu2_eyecatch.png'
-import thumbFreeDBTagger from '../public/images/works/freedbtagger_eyecatch.png'
-import thumbAmembo from '../public/images/works/amembo_eyecatch.png'
-
+import gem from '../public/images/projects/g-docs.png'
+import gemdocs from '../public/images/projects/g-pp.png'
+import noter from '../public/images/projects/1.png'
+import anslemio from '../public/images/projects/ans-io.png'
+import flutterhiveapp from '../public/images/projects/hive-app.png'
+import drinkup from '../public/images/projects/d-up.jpg'
 const Works = () => (
   <Layout title="Works">
     <Container>
@@ -23,35 +17,40 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="inkdrop" title="Inkdrop" thumbnail={thumbInkdrop}>
-            A Markdown note-taking app with 100+ plugins, cross-platform and
-            encrypted data sync support
+          <WorkGridItem id="inkdrop" title={<Link href="#">
+
+            Gem Music</Link>} thumbnail={gem}>
+            An advanced music mobile app, with multipl capabilities, such as streaming audio from
+            youtube, not forgetting an awesome modern UI.
           </WorkGridItem>
         </Section>
         <Section>
           <WorkGridItem
-            id="walknote"
-            title="walknote"
-            thumbnail={thumbWalknote}
+            id="fourpainters"
+            title={<Link href="#">
+
+              Anslem io</Link>}
+            thumbnail={anslemio}
           >
-            Music recommendation app for iOS
+            A flutter portfolio webapp, showcasing use of multiple api's and services, with
+            a very slick UI.
           </WorkGridItem>
         </Section>
 
         <Section delay={0.1}>
           <WorkGridItem
-            id="fourpainters"
-            title="The four painters"
-            thumbnail={thumbFourPainters}
+            id="walknote"
+            title={<Link href='#' >Noter</Link>}
+            thumbnail={noter}
           >
-            A video work generated with deep learning, imitating famous four
-            painters like Van Gogh
+            Simple notes taking app.
           </WorkGridItem>
         </Section>
         <Section delay={0.1}>
-          <WorkGridItem id="menkiki" thumbnail={thumbMenkiki} title="Menkiki">
-            An app that suggests ramen(noodle) shops based on a given photo of
-            the ramen you want to eat
+          <WorkGridItem id="menkiki" thumbnail={gemdocs} title={<Link href="#">
+
+            Gem Docs</Link>}>
+            Landing page website for Gem App made with pug.
           </WorkGridItem>
         </Section>
       </SimpleGrid>
@@ -60,34 +59,35 @@ const Works = () => (
         <Divider my={6} />
 
         <Heading as="h3" fontSize={20} mb={4}>
-          Collaborations
+          More projects...
         </Heading>
       </Section>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.3}>
-          <WorkGridItem id="margelo" thumbnail={thumbMargelo} title="Margelo">
-            A website of the elite app development and contracting agency based
-            in Austria
+          <WorkGridItem
+            id="margelo" thumbnail={drinkup}
+            title={<Link href="https://github.com/Anslem27/Drink-up">
+              Drink Up</Link>
+            }>
+            A simple water intake tracking app.(Never got to really finish it.)
           </WorkGridItem>
         </Section>
         <Section delay={0.3}>
           <WorkGridItem
             id="modetokyo"
-            thumbnail={thumbModeTokyo}
-            title="mode.tokyo"
+            thumbnail={flutterhiveapp}
+            title={<Link href="https://github.com/Anslem27/Hive-Todo-App">
+
+              Hive ToDo app</Link>}
           >
-            The mode magazine for understanding to personally enjoy Japan
-          </WorkGridItem>
-        </Section>
-        <Section delay={0.3}>
-          <WorkGridItem id="styly" thumbnail={thumbStyly} title="Styly">
-            A VR Creative tools for fashion brands
+            A simple flutter hive database app, using hive a no sql database.
+            <Link href='https://pub.dev/packages/hive'>(Hive)</Link>
           </WorkGridItem>
         </Section>
       </SimpleGrid>
-
-      <Section delay={0.4}>
+      <Divider my={6} />
+      {/* <Section delay={0.4}>
         <Divider my={6} />
 
         <Heading as="h3" fontSize={20} mb={4}>
@@ -116,7 +116,7 @@ const Works = () => (
             Windows
           </WorkGridItem>
         </Section>
-      </SimpleGrid>
+      </SimpleGrid> */}
     </Container>
   </Layout>
 )

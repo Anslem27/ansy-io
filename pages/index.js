@@ -18,8 +18,8 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub, IoLogoReddit } from 'react-icons/io5'
-import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import rdt from '../public/images/rdt.png'
+import twt from '../public/images/twt.png'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -78,7 +78,7 @@ const Home = () => (
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Work
+          A little about me
         </Heading>
         <Paragraph>
           Anslem is an undergraduate and a aspiring software developer based in Kampala with a
@@ -114,7 +114,7 @@ const Home = () => (
         </BioSection>
         <BioSection>
           <BioYear>2022</BioYear>
-          Started a Bachelors&apos;s degree at Kyamboggo University
+          Started and is still pursuing a Bachelors&apos;s degree at Kyamboggo University
 
         </BioSection>
         {/* <BioSection>
@@ -132,15 +132,15 @@ const Home = () => (
           I 💙
         </Heading>
         <Paragraph>
-          Gaming, EDM Music,{' '}
-          <Link href="#" target="_blank">
-            Drawing
+          Gaming, EDM Music.{' '}
+          <Link href="https://open.spotify.com/user/316mcic43djzxxpavdtc5ckm7eiu?si=15fbb02bc5434803" target="_blank">
+            Spotify
           </Link>
-          , Dart Flutter,{' '}
-          <Link href="#" target="_blank">
-            Photography
+          , Dart, FrontEndDevelopment,{' '}
+          <Link href="https://flutter.dev/" target="_blank">
+            Flutter
           </Link>
-          , Oneplus, Mobile App development
+          , Oneplus Mobile, Mobile App development
         </Paragraph>
       </Section>
 
@@ -187,18 +187,23 @@ const Home = () => (
 
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            href="#"
-            title="Reddit"
-            thumbnail={thumbYouTube}
+            href={"https://www.reddit.com/user/Infamous-Date-355"}
+            title={<Link href="https://www.reddit.com/user/Infamous-Date-355" target="_blank">
+              Reddit
+            </Link>}
+            thumbnail={rdt}
           >
             Reddit Enjoyer (&gt;25k karma)
           </GridItem>
           <GridItem
-            href="#"
-            title="Gem Music"
-            thumbnail={thumbInkdrop}
+            href={"https://twitter.com/anslemAnsy"}
+            title={<Link href="https://twitter.com/anslemAnsy" target="_blank">
+              Twitter
+            </Link>}
+            thumbnail={twt}
           >
-            An Awesome Modern Music App.
+            DM. me on twitter
+            (Not a prominent user though 😃)
           </GridItem>
         </SimpleGrid>
 
