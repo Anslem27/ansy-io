@@ -96,7 +96,7 @@ const Home = () => (
           &quot; and has some really revolutionary stuff.
         </Paragraph>
         <Box align="center" my={4}>
-          <NextLink href="/works" passHref scroll={false}>
+          <NextLink href="/projects" passHref scroll={false}>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               My portfolio
             </Button>
@@ -188,7 +188,7 @@ const Home = () => (
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
             href={"https://www.reddit.com/user/Infamous-Date-355"}
-            title={<Link href="https://www.reddit.com/user/Infamous-Date-355" target="_blank">
+            title={<Link color="#FF5700" href="https://www.reddit.com/user/Infamous-Date-355" target="_blank">
               Reddit
             </Link>}
             thumbnail={rdt}
@@ -197,7 +197,7 @@ const Home = () => (
           </GridItem>
           <GridItem
             href={"https://twitter.com/anslemAnsy"}
-            title={<Link href="https://twitter.com/anslemAnsy" target="_blank">
+            title={<Link color="	#1DA1F2" href="https://twitter.com/anslemAnsy" target="_blank">
               Twitter
             </Link>}
             thumbnail={twt}

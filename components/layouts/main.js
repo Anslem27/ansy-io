@@ -5,7 +5,7 @@ import { Box, Container } from '@chakra-ui/react'
 import Footer from '../footer'
 import VoxelDogLoader from '../voxel-dog-loader'
 
-const LazyVoxelDog = dynamic(() => import('../voxel-dog'), {
+const LazyVoxelDog = dynamic(() => import('../3d_aspect'), {
   ssr: false,
   loading: () => <VoxelDogLoader />
 })
@@ -25,8 +25,8 @@ const Main = ({ children, router }) => {
         <meta name="twitter:site" content="@anslemAnsy" />
         <meta name="twitter:creator" content="@anslemAnsy" />
         <meta name="twitter:image" content="https://www.craftz.dog/card.png" />
-        <meta property="og:site_name" content="Takuya Matsuyama" />
-        <meta name="og:title" content="Takuya Matsuyama" />
+        <meta property="og:site_name" content="Anslem Seguya" />
+        <meta name="og:title" content="Anslem Seguya" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.craftz.dog/card.png" />
         <title>ansy io</title>
