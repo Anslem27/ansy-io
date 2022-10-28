@@ -8,16 +8,18 @@ import noter from '../public/images/projects/1.png'
 import anslemio from '../public/images/projects/ans-io.png'
 import flutterhiveapp from '../public/images/projects/hive-app.png'
 import drinkup from '../public/images/projects/d-up.jpg'
+
+
 const Works = () => (
   <Layout title="Works">
     <Container>
-      <Heading as="h3"fontSize={25} paddingBottom={5} variant="section-title">
+      <Heading as="h3" fontSize={25} paddingBottom={5} variant="section-title">
         Projects
       </Heading>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="inkdrop" title={<Link href="#">
+          <WorkGridItem id="Gem" title={<Link href="#">
 
             Gem Music</Link>} thumbnail={gem}>
             An advanced music mobile app, with multipl capabilities, such as streaming audio from
@@ -26,7 +28,7 @@ const Works = () => (
         </Section>
         <Section>
           <WorkGridItem
-            id="fourpainters"
+            id="anslemio"
             title={<Link href="https://anslem27.github.io/">
 
               Anslem io</Link>}
@@ -39,7 +41,7 @@ const Works = () => (
 
         <Section delay={0.1}>
           <WorkGridItem
-            id="walknote"
+            id="noter"
             title={<Link href='#' >Noter</Link>}
             thumbnail={noter}
           >
@@ -47,7 +49,7 @@ const Works = () => (
           </WorkGridItem>
         </Section>
         <Section delay={0.1}>
-          <WorkGridItem id="menkiki" thumbnail={gemdocs} title={<Link href="#">
+          <WorkGridItem id="gemdocs" thumbnail={gemdocs} title={<Link href="#">
 
             Gem Docs</Link>}>
             Landing page website for Gem App made with pug.
@@ -66,7 +68,7 @@ const Works = () => (
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.3}>
           <WorkGridItem
-            id="margelo" thumbnail={drinkup}
+            id="drink up" thumbnail={drinkup}
             title={<Link href="https://github.com/Anslem27/Drink-up">
               Drink Up</Link>
             }>
@@ -75,7 +77,7 @@ const Works = () => (
         </Section>
         <Section delay={0.3}>
           <WorkGridItem
-            id="modetokyo"
+            id="hive todo"
             thumbnail={flutterhiveapp}
             title={<Link href="https://github.com/Anslem27/Hive-Todo-App">
 
@@ -87,36 +89,7 @@ const Works = () => (
         </Section>
       </SimpleGrid>
       <Divider my={6} />
-      {/* <Section delay={0.4}>
-        <Divider my={6} />
 
-        <Heading as="h3" fontSize={20} mb={4}>
-          Old works
-        </Heading>
-      </Section>
-
-      <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        <Section delay={0.5}>
-          <WorkGridItem id="pichu2" thumbnail={thumbPichu2} title="Pichu*Pichu">
-            Twitter client app for iPhone Safari
-          </WorkGridItem>
-        </Section>
-        <Section delay={0.5}>
-          <WorkGridItem
-            id="freedbtagger"
-            thumbnail={thumbFreeDBTagger}
-            title="freeDBTagger"
-          >
-            Automatic audio file tagging tool using FreeDB for Windows
-          </WorkGridItem>
-        </Section>
-        <Section delay={0.6}>
-          <WorkGridItem id="amembo" thumbnail={thumbAmembo} title="Amembo">
-            P2P private file sharing tool with MSN Messenger integration for
-            Windows
-          </WorkGridItem>
-        </Section>
-      </SimpleGrid> */}
     </Container>
   </Layout>
 )

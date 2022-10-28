@@ -12,14 +12,13 @@ import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 
 const Work = () => (
-  <Layout title="Inkdrop">
+  <Layout title="Gem">
     <Container>
       <Title>
-        Inkdrop <Badge>2016-</Badge>
+        Gem Music <Badge>2022-</Badge>
       </Title>
       <P>
-        A Markdown note-taking app with 100+ plugins, cross-platform and
-        encrypted data sync support. The life-time revenue is more than $300k.
+        An awesome modern music player, with youtube audio streaming functionality
       </P>
       <List ml={4} my={4}>
         <ListItem>
