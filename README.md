@@ -4,6 +4,13 @@
 
 ## Personal Portfolio developed with nextjs.
 
+### Geting Started
+
+```
+npm run dev
+- run at the selected port.
+```
+
 ## Stack
 
 - [Next.js](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.

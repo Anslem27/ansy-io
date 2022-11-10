@@ -17,9 +17,9 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub, IoLogoReddit } from 'react-icons/io5'
-import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import { IoLogoTwitter, IoLogoGithub, IoLogoReddit } from 'react-icons/io5'
+import rdt from '../public/images/r1-avatar.png'
+import twt from '../public/images/twt.png'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -78,7 +78,7 @@ const Home = () => (
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Work
+          A little about me
         </Heading>
         <Paragraph>
           Anslem is an undergraduate and a aspiring software developer based in Kampala with a
@@ -90,13 +90,13 @@ const Home = () => (
             <Link>Gem Music</Link>
           </NextLink>
           . He also has a differnt portfolio webApp made with flutter that you may be happy to check out called &quot;
-          <NextLink href="#" passHref>
+          <NextLink href="https://anslem27.github.io/" passHref>
             <Link target="_blank">Anslem.io</Link>
           </NextLink>
           &quot; and has some really revolutionary stuff.
         </Paragraph>
         <Box align="center" my={4}>
-          <NextLink href="/works" passHref scroll={false}>
+          <NextLink href="/projects" passHref scroll={false}>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               My portfolio
             </Button>
@@ -114,17 +114,9 @@ const Home = () => (
         </BioSection>
         <BioSection>
           <BioYear>2022</BioYear>
-          Started a Bachelors&apos;s degree at Kyamboggo University
+          Started and is still pursuing a Bachelors&apos;s degree at Kyamboggo University
 
         </BioSection>
-        {/* <BioSection>
-          <BioYear>2010</BioYear>
-          "Worked at Yahoo! Japan (ヤフー株式会社入社)"
-        </BioSection>
-        <BioSection>
-          <BioYear>2012 to present</BioYear>
-          Working as a freelancer
-        </BioSection> */}
       </Section>
 
       <Section delay={0.3}>
@@ -132,15 +124,15 @@ const Home = () => (
           I 💙
         </Heading>
         <Paragraph>
-          Gaming, EDM Music,{' '}
-          <Link href="#" target="_blank">
-            Drawing
+          Gaming, EDM Music.{' '}
+          <Link href="https://open.spotify.com/user/316mcic43djzxxpavdtc5ckm7eiu?si=15fbb02bc5434803" target="_blank">
+            Spotify
           </Link>
-          , Dart Flutter,{' '}
-          <Link href="#" target="_blank">
-            Photography
+          , Dart, FrontEndDevelopment,{' '}
+          <Link href="https://flutter.dev/" target="_blank">
+            Flutter
           </Link>
-          , Oneplus, Mobile App development
+          , Oneplus Mobile, Mobile App development
         </Paragraph>
       </Section>
 
@@ -187,18 +179,23 @@ const Home = () => (
 
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            href="#"
-            title="Reddit"
-            thumbnail={thumbYouTube}
+            href={"https://www.reddit.com/user/Infamous-Date-355"}
+            title={<Link color="#FF5700" href="https://www.reddit.com/user/Infamous-Date-355" target="_blank">
+              Reddit
+            </Link>}
+            thumbnail={rdt}
           >
-            Reddit Enjoyer (&gt;25k karma)
+            Reddit Enjoyer (&gt;35k karma)
           </GridItem>
           <GridItem
-            href="#"
-            title="Gem Music"
-            thumbnail={thumbInkdrop}
+            href={"https://twitter.com/anslemAnsy"}
+            title={<Link color="	#1DA1F2" href="https://twitter.com/anslemAnsy" target="_blank">
+              Twitter
+            </Link>}
+            thumbnail={twt}
           >
-            An Awesome Modern Music App.
+            DM. me on twitter
+            (Not a prominent user though 😃)
           </GridItem>
         </SimpleGrid>
 

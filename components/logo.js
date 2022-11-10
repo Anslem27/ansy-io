@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { Text, useColorModeValue } from '@chakra-ui/react'
-import FootprintIcon from './icons/footprint'
-import CatLogo from './icons/cat-logo'
+import Image from "next/image"
 import styled from '@emotion/styled'
 
 const LogoBox = styled.span`
@@ -27,7 +26,9 @@ const Logo = () => {
     <Link href="/" scroll={false}>
       <a>
         <LogoBox>
-          <FootprintIcon />
+          {/* Rabbit Icon */}
+          <Image src={"/rabbit.png"} width={25} height={25} />
+          {/* Name in logo */}
           <Text
             color={useColorModeValue('gray.800', 'whiteAlpha.900')}
             fontFamily='M PLUS Rounded 1c", sans-serif'
