@@ -8,7 +8,7 @@ import noter from '../public/images/projects/1.png'
 import anslemio from '../public/images/projects/ans-io.png'
 import flutterhiveapp from '../public/images/projects/hive-app.png'
 import drinkup from '../public/images/projects/d-up.jpg'
-
+import flutterBlogDashBoard from '../public/images/projects/blog_dashboard.jpeg'
 
 const Works = () => (
   <Layout title="Works">
@@ -19,7 +19,7 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="Gem" title={<Link href="#">
+          <WorkGridItem id="gem" title={<Link href="https://github.com/Anslem27/Gem-Docs/releases/tag/pre-release">
 
             Gem Music</Link>} thumbnail={gem}>
             An advanced music mobile app, with multipl capabilities, such as streaming audio from
@@ -41,18 +41,18 @@ const Works = () => (
 
         <Section delay={0.1}>
           <WorkGridItem
-            id="noter"
-            title={<Link href='#' >Noter</Link>}
-            thumbnail={noter}
+            id="blog-dashboard"
+            title={<Link href='https://github.com/Anslem27/Blog-DashBoard' >Blog Dashboard Ui</Link>}
+            thumbnail={flutterBlogDashBoard}
           >
-            Simple notes taking app.
+            A minimalistic dashboard ui template for editting .md text
           </WorkGridItem>
         </Section>
         <Section delay={0.1}>
-          <WorkGridItem id="gemdocs" thumbnail={gemdocs} title={<Link href="#">
+          <WorkGridItem id="gemdocs" thumbnail={gemdocs} title={<Link href="https://github.com/Anslem27/Gem-Docs/">
 
             Gem Docs</Link>}>
-            Landing page website for Gem App made with pug.
+            Landing page website for Gem App made with pug. (Planning on re-doing it with Next.js)
           </WorkGridItem>
         </Section>
       </SimpleGrid>

@@ -17,8 +17,8 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub, IoLogoReddit } from 'react-icons/io5'
-import rdt from '../public/images/rdt.png'
+import { IoLogoTwitter, IoLogoGithub, IoLogoReddit } from 'react-icons/io5'
+import rdt from '../public/images/r1-avatar.png'
 import twt from '../public/images/twt.png'
 import Image from 'next/image'
 
@@ -90,7 +90,7 @@ const Home = () => (
             <Link>Gem Music</Link>
           </NextLink>
           . He also has a differnt portfolio webApp made with flutter that you may be happy to check out called &quot;
-          <NextLink href="#" passHref>
+          <NextLink href="https://anslem27.github.io/" passHref>
             <Link target="_blank">Anslem.io</Link>
           </NextLink>
           &quot; and has some really revolutionary stuff.
@@ -117,14 +117,6 @@ const Home = () => (
           Started and is still pursuing a Bachelors&apos;s degree at Kyamboggo University
 
         </BioSection>
-        {/* <BioSection>
-          <BioYear>2010</BioYear>
-          "Worked at Yahoo! Japan (ヤフー株式会社入社)"
-        </BioSection>
-        <BioSection>
-          <BioYear>2012 to present</BioYear>
-          Working as a freelancer
-        </BioSection> */}
       </Section>
 
       <Section delay={0.3}>
@@ -193,7 +185,7 @@ const Home = () => (
             </Link>}
             thumbnail={rdt}
           >
-            Reddit Enjoyer (&gt;25k karma)
+            Reddit Enjoyer (&gt;35k karma)
           </GridItem>
           <GridItem
             href={"https://twitter.com/anslemAnsy"}

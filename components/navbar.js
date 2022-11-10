@@ -74,12 +74,6 @@ const Navbar = props => {
           <LinkItem href="/projects" path={path}>
             Projects
           </LinkItem>
-          <LinkItem href="/posts" path={path}>
-            Posts
-          </LinkItem>
-          {/* <LinkItem href="#">
-            Uses
-          </LinkItem> */}
           <LinkItem
             target="_blank"
             href="https://github.com/Anslem27/"
@@ -95,7 +89,10 @@ const Navbar = props => {
         </Stack>
 
         <Box flex={1} align="right">
+
+          {/* Theme Toggle Button */}
           <ThemeToggleButton />
+          <Link paddingLeft="5">Check out Anslem.io</Link>
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id="navbar-menu">
@@ -112,17 +109,11 @@ const Navbar = props => {
                 <NextLink href="/projects" passHref>
                   <MenuItem as={Link}>Projects</MenuItem>
                 </NextLink>
-                <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
-                </NextLink>
-                {/* <NextLink href="#" passHref>
-                  <MenuItem as={Link}>Uses</MenuItem>
-                </NextLink> */}
                 <MenuItem
                   as={Link}
-                  href="#"
+                  href="https://github.com/Anslem27"
                 >
-                  View Source
+                  Github
                 </MenuItem>
               </MenuList>
             </Menu>
