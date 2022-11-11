@@ -4,11 +4,15 @@
 
 ## Personal Portfolio developed with nextjs.
 
+Check out live app [here](https://ansy-io.vercel.app/)
+
 ### Geting Started
 
-```
-npm run dev
-- run at the selected port.
+```bash
+yarn install
+
+yarn dev
+
 ```
 
 ## Stack
@@ -36,4 +40,3 @@ $PROJECT_ROOT
 
 MIT License.
 
-You can create your own homepage for free without notifying me by forking this project under the following conditions:
