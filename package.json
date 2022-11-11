@@ -6,8 +6,7 @@
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
     "start": "next start",
-    "prettier": "prettier --write .",
-    "lint": "next lint"
+    "prettier": "prettier --write ."
   },
   "keywords": [],
   "author": "Anslem Seguya",

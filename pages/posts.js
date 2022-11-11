@@ -1,4 +1,4 @@
-import { Container, Heading, SimpleGrid, Link, Divider, Box, Img } from '@chakra-ui/react'
+import { Container, Heading, Link, Divider, Box, Img } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import { GridItem } from '../components/grid-item'
 import { IoLogoReddit } from 'react-icons/io5'
