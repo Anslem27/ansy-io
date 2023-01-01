@@ -22,8 +22,8 @@ const Work = () => (
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Website</Meta>
-          <Link href="https://github.com/Anslem27/Gem-Docs/">
-            https://github.com/Anslem27/Gem-Docs/ <ExternalLinkIcon mx="2px" />
+          <Link href="https://gem-one.vercel.app/">
+            https://gem-one.vercel.app/ <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         <ListItem>
