@@ -1,15 +1,19 @@
 # ansy io
 
+<p align="left">
+<p align="center">
+<a target="blank"><img align="center" src="./public/favicon.ico" alt="Infamous-Date-355" height="50" width="50" /></a></p>
+</p>
 <!-- [https://](https://) -->
 
-## Personal Portfolio developed with nextjs.
+## My personal Portfolio developed with nextjs.
 
 Check out live app [here](https://ansy-io.vercel.app/)
 
 ### Geting Started
 
 ```bash
-yarn install
+yarn
 
 yarn dev
 
@@ -32,11 +36,10 @@ $PROJECT_ROOT
 ├── components
 │   # Non-react modules
 ├── lib
-│   # Static files for images and 3d model file
+│   # Static files for images
 └── public
 ```
 
 ## License
 
 MIT License.
-
