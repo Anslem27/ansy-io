@@ -8,7 +8,13 @@
     "start": "next start",
     "prettier": "prettier --write ."
   },
-  "keywords": [],
+  "keywords": [
+    "developer portfolio",
+    "portfolio",
+    "Anslem Seguya",
+    "Next js",
+    "portfolio"
+  ],
   "author": "Anslem Seguya",
   "license": "MIT",
   "dependencies": {

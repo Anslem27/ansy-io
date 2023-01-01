@@ -37,7 +37,7 @@ const Home = () => (
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hello, I&apos;m an aspiring software developer based in Uganda!
+        Hello, I&apos;m a software developer based in Uganda!
       </Box>
 
       <Box display={{ md: 'flex' }}>
@@ -45,7 +45,7 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Anslem Seguya
           </Heading>
-          <p>Proficient Gamer ( Redditor / Developer / Designer )</p>
+          <p>Casual Gamer ( Redditor / Developer / Designer )</p>
         </Box>
         <Box
           flexShrink={0}
@@ -185,7 +185,7 @@ const Home = () => (
             </Link>}
             thumbnail={rdt}
           >
-            Reddit Enjoyer (&gt;35k karma)
+            Reddit Enjoyer (&gt;47k karma)
           </GridItem>
           <GridItem
             href={"https://twitter.com/anslemAnsy"}
