@@ -23,10 +23,13 @@
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "framer-motion": "^7.2.0",
+    "isomorphic-unfetch": "^4.0.1",
     "next": "^12.3.1",
+    "querystring": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
+    "swr": "^2.0.0",
     "three": "^0.143.0"
   },
   "devDependencies": {

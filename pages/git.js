@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import RepoView from '../components/repo_view'
 import Layout from '../components/layouts/article'
-import { Container, Heading, Link, Divider, Box, Input, Text, } from '@chakra-ui/react'
+import { Container, Heading, Link, Divider, Box, Input, Text } from '@chakra-ui/react'
 import { IoLogoGithub } from 'react-icons/io5'
 
 export default function Git({ repos }) {
