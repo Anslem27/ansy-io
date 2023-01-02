@@ -3,7 +3,11 @@ import { Box, Text, LinkBox, LinkOverlay, Flex } from '@chakra-ui/react'
 import { IoLogoGithub, IoStar, IoArchiveOutline } from 'react-icons/io5'
 
 export const RepoCard = ({ repo }) => (
-    <Box w="100%" textAlign="center" padding={8} margin={2} borderWidth='1px' borderRadius='lg' _hover={{ backgroundColor: '#1DA1F2', opacity: '0.5' }} overflow='hidden' borderColor='#1DA1F2' justifyContent="center">
+    <Box w="100%" textAlign="center" padding={8} margin={2} borderWidth='1px' borderRadius='lg' _hover={{
+        background: "Teal",
+        opacity: "0.5",
+        cursor: "pointer"
+    }} overflow='hidden' borderColor='grassTeal' justifyContent="center">
         <NextLink href={repo.html_url} passHref scroll={false}>
             <LinkBox cursor="pointer">
                 <IoLogoGithub size={35}>

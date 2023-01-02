@@ -1,19 +1,27 @@
 
-import { Heading } from '@chakra-ui/react'
+import { Heading, SimpleGrid } from '@chakra-ui/react'
 import RepoCard from './repo_card';
 
 
 const RepoView = ({ reposToDisplay }) => {
     if (Array.isArray(reposToDisplay)) {
         return (
-            <div>
-                {reposToDisplay.map(repo => <div key={repo.id} >
+            <SimpleGrid
+                columns={{ base: 1, xl: 2 }}
+                spacing={'5'}
+                mt={16}
+                width={{ xl: "3xl" }}
+                mx={'auto'}
+            >
+              
+                    {reposToDisplay.map(repo => <div key={repo.id} >
 
-                    <RepoCard repo={repo} />
+                        <RepoCard repo={repo} />
 
-                </div>)
-                }
-            </div >
+                    </div>)
+                    }
+              
+            </SimpleGrid>
         );
     } else {
         return <Heading as="h1" fontSize={22} mb={4}>

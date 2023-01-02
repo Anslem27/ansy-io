@@ -18,7 +18,7 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="gem" title={<Link href="https://github.com/Anslem27/Gem-Docs/releases/tag/pre-release">
+          <WorkGridItem id="gem" title={<Link href="https://gem-one.vercel.app/">
 
             Gem Music</Link>} thumbnail={gem}>
             An advanced music mobile app, with multipl capabilities, such as streaming audio from
@@ -44,14 +44,14 @@ const Works = () => (
             title={<Link href='https://github.com/Anslem27/Blog-DashBoard' >Blog Dashboard Ui</Link>}
             thumbnail={flutterBlogDashBoard}
           >
-            A minimalistic dashboard ui template for editting .md text
+            A minimalistic dashboard ui template for editting markdown text
           </WorkGridItem>
         </Section>
         <Section delay={0.1}>
-          <WorkGridItem id="gemdocs" thumbnail={gemdocs} title={<Link href="https://github.com/Anslem27/Gem-Docs/">
+          <WorkGridItem id="gemdocs" thumbnail={gemdocs} title={<Link href="https://gem-one.vercel.app/">
 
             Gem Docs</Link>}>
-            Landing page website for Gem App made with pug. (Planning on re-doing it with Next.js)
+            Landing page website for Gem App made with next Js.
           </WorkGridItem>
         </Section>
       </SimpleGrid>

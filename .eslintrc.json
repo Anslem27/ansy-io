@@ -4,6 +4,9 @@
   "rules": {
     
     "react/display-name": 0,
-    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    "react/jsx-key":"off",
+    "jsx-a11y/alt-text":"off",
+    "react/no-children-prop":"off"
   }
 }

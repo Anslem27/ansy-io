@@ -24,7 +24,8 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
   return (
     <NextLink href={href} passHref scroll={false}>
       <Link
-        p={2}
+        p={1}
+        borderRadius="3"
         bg={active ? 'grassTeal' : undefined}
         color={active ? '#202023' : inactiveColor}
         target={target}
@@ -44,6 +45,7 @@ const Navbar = props => {
       position="fixed"
       as="nav"
       w="100%"
+
       bg={useColorModeValue('#ffffff40', '#20202380')}
       css={{ backdropFilter: 'blur(10px)' }}
       zIndex={2}
@@ -56,6 +58,7 @@ const Navbar = props => {
         wrap="wrap"
         align="center"
         justify="space-between"
+
       >
         <Flex align="center" mr={5}>
           <Heading as="h1" size="lg" letterSpacing={'tighter'}>
@@ -73,6 +76,12 @@ const Navbar = props => {
         >
           <LinkItem href="/projects" path={path}>
             Projects
+          </LinkItem>
+          <LinkItem href="/snippets" path={path}>
+            Snippets
+          </LinkItem>
+          <LinkItem href="/resources" path={path}>
+            Resources
           </LinkItem>
           <LinkItem
             href="/git"
@@ -101,6 +110,7 @@ const Navbar = props => {
                 variant="outline"
                 aria-label="Options"
               />
+
               <MenuList>
                 <NextLink href="/" passHref>
                   <MenuItem as={Link}>About</MenuItem>
@@ -108,6 +118,11 @@ const Navbar = props => {
                 <NextLink href="/projects" passHref>
                   <MenuItem as={Link}>Projects</MenuItem>
                 </NextLink>
+
+                <NextLink href="/snippets" passHref>
+                  <MenuItem as={Link}>Snippets</MenuItem>
+                </NextLink>
+
                 <MenuItem
                   as={Link}
                   href="/git"

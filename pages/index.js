@@ -37,7 +37,7 @@ const Home = () => (
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hello, I&apos;m a software developer based in Uganda!
+        Hello, I&apos;m a student and software developer based in Uganda!
       </Box>
 
       <Box display={{ md: 'flex' }}>
@@ -138,7 +138,7 @@ const Home = () => (
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          On the web
+          Links and Socials
         </Heading>
         <List>
           <ListItem>
