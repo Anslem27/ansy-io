@@ -10,17 +10,17 @@ const RepoView = ({ reposToDisplay }) => {
                 columns={{ base: 1, xl: 2 }}
                 spacing={'5'}
                 mt={16}
-                width={{ xl: "3xl" }}
+                width={{ xl: "2xl" }}
                 mx={'auto'}
             >
-              
-                    {reposToDisplay.map(repo => <div key={repo.id} >
 
-                        <RepoCard repo={repo} />
+                {reposToDisplay.map(repo => <div key={repo.id} >
 
-                    </div>)
-                    }
-              
+                    <RepoCard repo={repo} />
+
+                </div>)
+                }
+
             </SimpleGrid>
         );
     } else {

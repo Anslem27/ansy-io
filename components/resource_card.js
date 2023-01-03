@@ -11,12 +11,12 @@ export default function ResourcesCard({
 }) {
     return (
         <Box
-           
+
             border="1px solid"
             borderColor="grassTeal"
             borderRadius="md"
             margin={5}
-            padding="20px"
+            padding="10px"
             _hover={{
                 transform: "scale(1.02)",
                 boxShadow: "lg"

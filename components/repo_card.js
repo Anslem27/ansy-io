@@ -18,7 +18,7 @@ export const RepoCard = ({ repo }) => (
                     </Text>
                 </LinkOverlay>
                 <Text fontSize={14}>{repo.description}</Text>
-                <Flex alignItems="center" padding="10px" > <IoStar color='fbd38d'></IoStar>
+                <Flex alignItems="center" padding="10px"> <IoStar color='fbd38d'></IoStar>
                     <Box><Text>
                         {repo.stargazers_count === 0 ? "No stars" : repo.stargazers_count === 1 ? "1 Star" : repo.stargazers_count + " stars"}
                     </Text></Box>

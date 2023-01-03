@@ -9,7 +9,8 @@ import {
   List,
   ListItem,
   useColorModeValue,
-  chakra
+  chakra,
+  Text
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
@@ -17,7 +18,7 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoGithub, IoLogoReddit } from 'react-icons/io5'
+import { IoLogoTwitter, IoLogoGithub, IoLogoReddit, IoArrowForward } from 'react-icons/io5'
 import rdt from '../public/images/r1-avatar.png'
 import twt from '../public/images/twt.png'
 import Image from 'next/image'
@@ -81,14 +82,13 @@ const Home = () => (
           A little about me
         </Heading>
         <Paragraph>
-          Anslem is an undergraduate and a aspiring software developer based in Kampala with a
+          Anslem is an undergraduate and an aspiring software developer based in Kampala Uganda with a
           passion for building digital stuff and amazing Ui's. He has a special zeal
           for all things `frontend`, from planning and designing all from the basics as a
           way to solving real-life problems with code, and making it look great all-together. When not online, he loves
-          listening to some soothing alternate jams. Currently, he is learning react, Next js and basics of game development{' '}
-          <NextLink href="https://github.com/Anslem27/Gem-Docs" passHref scroll={false}>
-            <Link>Gem Music</Link>
-          </NextLink>
+          listening to some soothing indie alternate jams. Currently, he is learning Next js and intermediate software
+          development techniques in next js as well as advancing my skills in mobile app development.
+          {' '}
           . He also has a differnt portfolio webApp made with flutter that you may be happy to check out called &quot;
           <NextLink href="https://anslem27.github.io/" passHref>
             <Link target="_blank">Anslem.io</Link>
@@ -119,6 +119,49 @@ const Home = () => (
         </BioSection>
       </Section>
 
+      <Heading as="h3" variant="section-title">
+        Featured Projects
+      </Heading>
+      <NextLink href="/works/gem" passHref scroll={false}>
+        <Link><Button
+
+          variant="ghost"
+          colorScheme="teal"
+          leftIcon={<IoLogoGithub />}
+        >
+          Gem Music
+        </Button></Link>
+
+      </NextLink>
+      {/* style={{
+  display: 'flex',
+  flexDirection: 'column',
+  '@media (min-width: 768px)': {
+    flexDirection: 'row'
+  }
+}} */}
+      <Box display={"flex"} flexDirection="row" alignItems={"center"}>
+        <IoArrowForward color='71cbc0'></IoArrowForward>
+        <Text paddingLeft={5}>Modern-ly designed music app, with youtube functionality.
+        </Text>
+      </Box>
+
+      <NextLink href="https://gem-one.vercel.app/" passHref scroll={false}>
+        <Link><Button
+
+          variant="ghost"
+          colorScheme="teal"
+          leftIcon={<IoLogoGithub />}
+        >
+          Anslem.io
+        </Button></Link>
+      </NextLink>
+      <Box display={"flex"} flexDirection="row" alignItems={"center"}>
+        <IoArrowForward color='71cbc0'></IoArrowForward>
+        <Text paddingLeft={5}>A beautifully designed and crafted portfolio website made with flutter.
+        </Text>
+      </Box>
+
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           I 💙
@@ -128,11 +171,11 @@ const Home = () => (
           <Link href="https://open.spotify.com/user/316mcic43djzxxpavdtc5ckm7eiu?si=15fbb02bc5434803" target="_blank">
             Spotify
           </Link>
-          , Dart, FrontEndDevelopment,{' '}
+          , Dartlang, FrontEndDevelopment,{' '}
           <Link href="https://flutter.dev/" target="_blank">
             Flutter
           </Link>
-          , Oneplus Mobile, Mobile App development
+          , Oneplus Mobile, Mobile App development.
         </Paragraph>
       </Section>
 
@@ -144,6 +187,7 @@ const Home = () => (
           <ListItem>
             <Link href="https://github.com/Anslem27" target="_blank">
               <Button
+
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoGithub />}
@@ -179,6 +223,7 @@ const Home = () => (
 
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
+
             href={"https://www.reddit.com/user/Infamous-Date-355"}
             title={<Link color="#FF5700" href="https://www.reddit.com/user/Infamous-Date-355" target="_blank">
               Reddit

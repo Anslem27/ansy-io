@@ -17,12 +17,13 @@ export default function Snippets({ snippets }) {
                         A collection of helpful resources on the internet
                     </Heading> <IoGift color='Teal'>
                     </IoGift>
-                    user, and here below are my projects.
+                    these are a collection of awesome useful websites across the web to solve alot
+                    of your coding insecurities.
                 </Heading>
                 <Heading as="h3" variant="section-title" color={"grassTeal"}>
                     Must have websites.
                 </Heading>
-                <SimpleGrid columns={{ base: 1, xl: 2 }}
+                <SimpleGrid columns={{ base: 2, xl: 3 }}
                     spacing={'1'}
                     mt={16}
                     width={{ xl: "3xl" }}
