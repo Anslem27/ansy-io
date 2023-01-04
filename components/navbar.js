@@ -100,8 +100,6 @@ const Navbar = props => {
 
           {/* Theme Toggle Button */}
           <ThemeToggleButton />
-          {/* <Link href='https://anslem27.github.io/' paddingLeft="5">Check out Anslem.io</Link> */}
-
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
@@ -116,6 +114,9 @@ const Navbar = props => {
                 </NextLink>
                 <NextLink href="/projects" passHref>
                   <MenuItem as={Link}>Projects</MenuItem>
+                </NextLink>
+                <NextLink href="/games" passHref>
+                  <MenuItem as={Link}>Game Story</MenuItem>
                 </NextLink>
                 <NextLink href="/resources" passHref>
                   <MenuItem as={Link}>Resources</MenuItem>
