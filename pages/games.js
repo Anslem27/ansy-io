@@ -175,7 +175,7 @@ const Games = () => {
 
                 <Box align="center" opacity={0.4} fontSize="sm" display={"flex"} flexDirection="row">
                     <IoInformationCircleOutline color='red' size={30}></IoInformationCircleOutline>
-                    All game artwork used on this website, is proprietary software licensed by its resoective creators,
+                    All game artwork used on this website, is proprietary software licensed by its respective creators,
                     and i own no such rights nor intend to take it as my own.
                 </Box>
             </Container>
