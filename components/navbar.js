@@ -77,8 +77,8 @@ const Navbar = props => {
           <LinkItem href="/projects" path={path}>
             Projects
           </LinkItem>
-          <LinkItem href="/snippets" path={path}>
-            Snippets
+          <LinkItem href="/games" path={path}>
+            Game Story
           </LinkItem>
           <LinkItem href="/resources" path={path}>
             Resources
@@ -110,7 +110,6 @@ const Navbar = props => {
                 variant="outline"
                 aria-label="Options"
               />
-
               <MenuList>
                 <NextLink href="/" passHref>
                   <MenuItem as={Link}>About</MenuItem>
@@ -120,10 +119,6 @@ const Navbar = props => {
                 </NextLink>
                 <NextLink href="/resources" passHref>
                   <MenuItem as={Link}>Resources</MenuItem>
-                </NextLink>
-
-                <NextLink href="/snippets" passHref>
-                  <MenuItem as={Link}>Snippets</MenuItem>
                 </NextLink>
 
                 <MenuItem

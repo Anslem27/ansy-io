@@ -4,7 +4,7 @@ import ResourcesCard from "../components/resource_card";
 import { IoGift } from 'react-icons/io5'
 
 
-export default function Snippets({ snippets }) {
+export default function Resources() {
     // TODO: Make sections for each type, ex: Javascript, HTML CSS etc, as well as search
     return (
         <Layout title="Resources">

@@ -1,4 +1,4 @@
-import { Container, Heading, SimpleGrid, Divider, Link } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Divider, Link, Badge, Box } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
@@ -10,7 +10,7 @@ import drinkup from '../public/images/projects/d-up.jpg'
 import flutterBlogDashBoard from '../public/images/projects/blog_dashboard.jpeg'
 
 const Works = () => (
-  <Layout title="Works">
+  <Layout title="Projects">
     <Container>
       <Heading as="h3" fontSize={25} paddingBottom={5} variant="section-title">
         Projects
@@ -24,6 +24,11 @@ const Works = () => (
             An advanced music mobile app, with multipl capabilities, such as streaming audio from
             youtube, not forgetting an awesome modern UI.
           </WorkGridItem>
+          <Box display={"flex"} flexDirection="row" marginTop={"2"}>
+            <Badge colorScheme='blue'>FLUTTER</Badge>
+            <Box paddingLeft="2"> </Box>
+            <Badge colorScheme='blue'>DART</Badge>
+          </Box>
         </Section>
         <Section>
           <WorkGridItem
@@ -36,6 +41,11 @@ const Works = () => (
             A flutter portfolio webapp, showcasing use of multiple api's and services, with
             a very slick UI.
           </WorkGridItem>
+          <Box display={"flex"} flexDirection="row" marginTop={"2"}>
+            <Badge colorScheme='blue'>FLUTTER</Badge>
+            <Box paddingLeft="2"> </Box>
+            <Badge colorScheme='blue'>DART</Badge>
+          </Box>
         </Section>
 
         <Section delay={0.1}>
@@ -46,6 +56,11 @@ const Works = () => (
           >
             A minimalistic dashboard ui template for editting markdown text
           </WorkGridItem>
+          <Box display={"flex"} flexDirection="row" marginTop={"2"}>
+            <Badge colorScheme='blue'>FLUTTER</Badge>
+            <Box paddingLeft="2"> </Box>
+            <Badge colorScheme='blue'>DART</Badge>
+          </Box>
         </Section>
         <Section delay={0.1}>
           <WorkGridItem id="gemdocs" thumbnail={gemdocs} title={<Link href="https://gem-one.vercel.app/">
@@ -53,6 +68,11 @@ const Works = () => (
             Gem Docs</Link>}>
             Landing page website for Gem App made with next Js.
           </WorkGridItem>
+          <Box display={"flex"} flexDirection="row" marginTop={"2"}>
+            <Badge colorScheme='blue'>TYPESCRIPT</Badge>
+            <Box paddingLeft="2"> </Box>
+            <Badge colorScheme='blue'>JAVASCRIPT</Badge>
+          </Box>
         </Section>
       </SimpleGrid>
 
@@ -73,6 +93,12 @@ const Works = () => (
             }>
             A simple water intake tracking app.(Never got to really finish it.)
           </WorkGridItem>
+          <Box display={"flex"} flexDirection="row" marginTop={"2"}>
+            <Badge colorScheme='blue'>FLUTTER</Badge>
+            <Box paddingLeft="2"> </Box>
+            <Badge colorScheme='blue'>DART</Badge>
+          </Box>
+          <Badge colorScheme='yellow'>Learning component</Badge>
         </Section>
         <Section delay={0.3}>
           <WorkGridItem
@@ -85,6 +111,13 @@ const Works = () => (
             A simple flutter hive database app, using hive a no sql database.
             <Link href='https://pub.dev/packages/hive'>(Hive)</Link>
           </WorkGridItem>
+          <Box display={"flex"} flexDirection="row" marginTop={"2"}>
+            <Badge colorScheme='blue'>FLUTTER</Badge>
+            <Box paddingLeft="2"> </Box>
+            <Badge colorScheme='blue'>HIVE DB</Badge>
+            <Box paddingLeft="2"> </Box>
+            <Badge colorScheme='yellow'>Learning component</Badge>
+          </Box>
         </Section>
       </SimpleGrid>
       <Divider my={6} />
