@@ -146,7 +146,7 @@ const Home = () => (
         </Text>
       </Box>
 
-      <NextLink href="https://gem-one.vercel.app/" passHref scroll={false}>
+      <NextLink href="https://github.com/Anslem27/Anslem27.github.io" passHref scroll={false}>
         <Link><Button
 
           variant="ghost"
