@@ -23,7 +23,7 @@ export default function Resources() {
                 <Heading as="h3" variant="section-title" color={"grassTeal"}>
                     Must have websites.
                 </Heading>
-                <SimpleGrid columns={{ base: 2, xl: 3 }}
+                <SimpleGrid columns={[1, 2, 2]}
                     spacing={'1'}
                     mt={16}
                     width={{ xl: "3xl" }}
