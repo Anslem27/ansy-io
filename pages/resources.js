@@ -28,12 +28,19 @@ export default function Resources() {
                     mt={16}
                     width={{ xl: "3xl" }}
                     mx={'auto'}>
+                    <ResourcesCard
+                        title="Story Set"
+                        link="https://carbon.now.sh/?bg"
+                        websiteLink="carbon.now.sh/?bg"
+                        description="Create and share beautiful images of your source code"
+                    />
 
                     <ResourcesCard
                         title="Story Set"
                         link="https://storyset.com/"
                         websiteLink="storyset.com"
-                        description="Beautiful illustrations and icons" />
+                        description="Beautiful illustrations and icons"
+                    />
 
                     <ResourcesCard
                         title="UI Gradients"
