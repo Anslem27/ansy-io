@@ -90,7 +90,7 @@ const Home = () => (
           development techniques in next js as well as advancing my skills in mobile app development.
           {' '}
           . He also has passion for writing articles primarily about coding and lots of other stuff on &quot;
-          <NextLink href="https://anslem27.github.io/" passHref>
+          <NextLink href="https://medium.com/@anslemAnsy" passHref>
             <Link target="_blank">medium</Link>
           </NextLink>
           &quot;
