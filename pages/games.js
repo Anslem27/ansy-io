@@ -18,7 +18,7 @@ const Games = () => {
                         Am a
                     </Heading> <IoGameController>
                     </IoGameController><Link>Video game lover </Link>
-                    and here, i tell a story of some of my most memorable video
+                    and here, i write about some of my most memorable video
                     games, i've played over the years.
                 </Heading>
                 <Box height={5} />

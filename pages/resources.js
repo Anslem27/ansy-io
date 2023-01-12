@@ -29,7 +29,7 @@ export default function Resources() {
                     width={{ xl: "3xl" }}
                     mx={'auto'}>
                     <ResourcesCard
-                        title="Story Set"
+                        title="Carbon.now.sh"
                         link="https://carbon.now.sh/?bg"
                         websiteLink="carbon.now.sh/?bg"
                         description="Create and share beautiful images of your source code"

@@ -46,7 +46,7 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Anslem Seguya
           </Heading>
-          <p>Casual Gamer ( Redditor / Developer / Designer )</p>
+          <p>Casual Gamer ( Redditor / Developer / Writer )</p>
         </Box>
         <Box
           flexShrink={0}
@@ -66,7 +66,7 @@ const Home = () => (
           >
             {/* My pesonal Logo */}
             <ProfileImage
-              src="/images/avatar.jpg"
+              src="/images/avatar.png"
               alt="Profile image/logo"
               borderRadius="full"
               width="150%"
@@ -89,11 +89,11 @@ const Home = () => (
           listening to some soothing indie alternate jams. Currently, he is learning Next js and intermediate software
           development techniques in next js as well as advancing my skills in mobile app development.
           {' '}
-          . He also has a differnt portfolio webApp made with flutter that you may be happy to check out called &quot;
+          . He also has passion for writing articles primarily about coding and lots of other stuff on &quot;
           <NextLink href="https://anslem27.github.io/" passHref>
-            <Link target="_blank">Anslem.io</Link>
+            <Link target="_blank">medium</Link>
           </NextLink>
-          &quot; and has some really revolutionary stuff.
+          &quot;
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/projects" passHref scroll={false}>
