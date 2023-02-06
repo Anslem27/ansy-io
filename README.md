@@ -2,11 +2,11 @@
 
 <p align="left">
 <p align="center">
-<a target="blank"><img align="center" src="./public/favicon.ico" alt="Infamous-Date-355" height="50" width="50" /></a></p>
+<a target="blank"><img align="center" src="./public/favicon.ico" alt="logo" height="50" width="50" /></a></p>
 </p>
 <!-- [https://](https://) -->
 
-## My personal Portfolio developed with nextjs.
+## My personal Portfolio made with nextjs.
 
 Check out live app [here](https://ansy-io.vercel.app/)
 

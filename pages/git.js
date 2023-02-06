@@ -39,10 +39,10 @@ export default function Git({ repos }) {
         </Heading>
         <Heading as="h3" fontSize={18} paddingBottom={10}>
           <Heading as="h3" variant="section-title">
-            Am a
+            Am an active
           </Heading> <IoLogoGithub>
           </IoLogoGithub><Link href="https://github.com/Anslem27">Github </Link>
-          user, and here below are my projects.
+          user, and here are some of my projects.
         </Heading>
         <Text color="#1DA1F2" >{"Total Stars: " + totalStargazers} </Text>
         <Input type="text" placeholder="Search for a repo by name or description" onChange={handleChange} height={45} padding={5} />

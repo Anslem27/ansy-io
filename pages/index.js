@@ -13,12 +13,13 @@ import {
   Text
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import TwitterCard from "../components/twitter_card"
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoGithub, IoLogoReddit, IoArrowForward } from 'react-icons/io5'
+import { IoLogoTwitter, IoLogoGithub, IoLogoReddit, IoArrowForward, IoLogoMedium } from 'react-icons/io5'
 import rdt from '../public/images/r1-avatar.png'
 import twt from '../public/images/twt.png'
 import Image from 'next/image'
@@ -64,7 +65,7 @@ const Home = () => (
             borderRadius="full"
             overflow="hidden"
           >
-            {/* My pesonal Logo */}
+            {/* My Logo */}
             <ProfileImage
               src="/images/avatar.png"
               alt="Profile image/logo"
@@ -98,7 +99,7 @@ const Home = () => (
         <Box align="center" my={4}>
           <NextLink href="/projects" passHref scroll={false}>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              My portfolio
+              My projects
             </Button>
           </NextLink>
         </Box>
@@ -183,42 +184,55 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           Links and Socials
         </Heading>
-        <List>
-          <ListItem>
-            <Link href="https://github.com/Anslem27" target="_blank">
-              <Button
+        <List paddingBottom={5}>
+          <SimpleGrid columns={[1, 2, 2]}>
 
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoGithub />}
-              >
-                @Anslem27
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/anslemAnsy" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @anslemAnsy
-              </Button>
-            </Link>
-          </ListItem>
+            <ListItem>
+              <Link href="https://github.com/Anslem27" target="_blank">
+                <Button
 
-          <ListItem>
-            <Link href="https://www.reddit.com/user/Infamous-Date-355/" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoReddit />}
-              >
-                @Infamous-Date-355
-              </Button>
-            </Link>
-          </ListItem>
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoGithub />}
+                >
+                  @Anslem27
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://twitter.com/anslemAnsy" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoTwitter />}
+                >
+                  @anslemAnsy
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://medium.com/@anslemAnsy" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoMedium />}
+                >
+                  Medium
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://www.reddit.com/user/Infamous-Date-355/" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoReddit />}
+                >
+                  @Infamous-Date-355
+                </Button>
+              </Link>
+            </ListItem>
+          </SimpleGrid>
         </List>
 
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
@@ -232,22 +246,14 @@ const Home = () => (
           >
             Reddit Enjoyer (&gt;47k karma)
           </GridItem>
-          <GridItem
-            href={"https://twitter.com/anslemAnsy"}
-            title={<Link color="	#1DA1F2" href="https://twitter.com/anslemAnsy" target="_blank">
-              Twitter
-            </Link>}
-            thumbnail={twt}
-          >
-            DM. me on twitter
-            (Not a prominent user though 😃)
-          </GridItem>
+          <TwitterCard />
+
         </SimpleGrid>
 
         <Box align="center" my={4}>
-          <NextLink href="/posts" passHref scroll={false}>
+          <NextLink href="/games" passHref scroll={false}>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              Popular posts
+              Gaming memoir
             </Button>
           </NextLink>
         </Box>
