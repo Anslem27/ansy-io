@@ -4,7 +4,6 @@ import {
   Container,
   Heading,
   Box,
-  SimpleGrid,
   Button,
   List,
   ListItem,
@@ -17,11 +16,14 @@ import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoGithub, IoLogoReddit, IoArrowForward } from 'react-icons/io5'
-import rdt from '../public/images/r1-avatar.png'
-import twt from '../public/images/twt.png'
+import { IoLogoTwitter, IoLogoGithub, IoArrowForward } from 'react-icons/io5'
+
 import Image from 'next/image'
+
+import {
+  MediumLogo
+} from 'phosphor-react'
+
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -64,7 +66,7 @@ const Home = () => (
             borderRadius="full"
             overflow="hidden"
           >
-            {/* My pesonal Logo */}
+            {/* Logo */}
             <ProfileImage
               src="/images/avatar.png"
               alt="Profile image/logo"
@@ -87,7 +89,7 @@ const Home = () => (
           for all things `frontend`, from planning and designing all from the basics as a
           way to solving real-life problems with code, and making it look great all-together. When not online, he loves
           listening to some soothing indie alternate jams. Currently, he is learning Next js and intermediate software
-          development techniques in next js as well as advancing my skills in mobile app development.
+          development techniques in next js as well as advancing his skills in mobile app development.
           {' '}
           . He also has passion for writing articles primarily about coding and lots of other stuff on &quot;
           <NextLink href="https://medium.com/@anslemAnsy" passHref>
@@ -97,8 +99,8 @@ const Home = () => (
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/projects" passHref scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              My portfolio
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="yellow">
+              My projects
             </Button>
           </NextLink>
         </Box>
@@ -126,7 +128,7 @@ const Home = () => (
         <Link><Button
 
           variant="ghost"
-          colorScheme="teal"
+          colorScheme="yellow"
           leftIcon={<IoLogoGithub />}
         >
           Gem Music
@@ -150,7 +152,7 @@ const Home = () => (
         <Link><Button
 
           variant="ghost"
-          colorScheme="teal"
+          colorScheme="yellow"
           leftIcon={<IoLogoGithub />}
         >
           Anslem.io
@@ -189,10 +191,10 @@ const Home = () => (
               <Button
 
                 variant="ghost"
-                colorScheme="teal"
+                colorScheme="yellow"
                 leftIcon={<IoLogoGithub />}
               >
-                @Anslem27
+                Anslem27
               </Button>
             </Link>
           </ListItem>
@@ -200,54 +202,29 @@ const Home = () => (
             <Link href="https://twitter.com/anslemAnsy" target="_blank">
               <Button
                 variant="ghost"
-                colorScheme="teal"
+                colorScheme="yellow"
                 leftIcon={<IoLogoTwitter />}
               >
                 @anslemAnsy
               </Button>
             </Link>
           </ListItem>
-
           <ListItem>
-            <Link href="https://www.reddit.com/user/Infamous-Date-355/" target="_blank">
+            <Link href="https://medium.com/@anslemAnsy" target="_blank">
               <Button
                 variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoReddit />}
+                colorScheme="yellow"
+                leftIcon={<MediumLogo />}
               >
-                @Infamous-Date-355
+                Anslem
               </Button>
             </Link>
           </ListItem>
         </List>
-
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-
-            href={"https://www.reddit.com/user/Infamous-Date-355"}
-            title={<Link color="#FF5700" href="https://www.reddit.com/user/Infamous-Date-355" target="_blank">
-              Reddit
-            </Link>}
-            thumbnail={rdt}
-          >
-            Reddit Enjoyer (&gt;47k karma)
-          </GridItem>
-          <GridItem
-            href={"https://twitter.com/anslemAnsy"}
-            title={<Link color="	#1DA1F2" href="https://twitter.com/anslemAnsy" target="_blank">
-              Twitter
-            </Link>}
-            thumbnail={twt}
-          >
-            DM. me on twitter
-            (Not a prominent user though 😃)
-          </GridItem>
-        </SimpleGrid>
-
         <Box align="center" my={4}>
-          <NextLink href="/posts" passHref scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              Popular posts
+          <NextLink href="/games" passHref scroll={false}>
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="yellow">
+              Gaming memoir
             </Button>
           </NextLink>
         </Box>

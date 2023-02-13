@@ -1,5 +1,5 @@
 import Layout from '../components/layouts/article'
-import { Container, Heading, Link, Divider, Box, Input, Text, SimpleGrid } from '@chakra-ui/react';
+import { Container, Heading, Divider, SimpleGrid } from '@chakra-ui/react';
 import ResourcesCard from "../components/resource_card";
 import { IoGift } from 'react-icons/io5'
 
@@ -15,12 +15,12 @@ export default function Resources() {
                 <Heading as="h3" fontSize={17} paddingBottom={10}>
                     <Heading as="h3" variant="section-title">
                         A collection of helpful resources on the internet
-                    </Heading> <IoGift color='Teal'>
+                    </Heading> <IoGift color='yellow.300'>
                     </IoGift>
                     these are a collection of awesome useful websites across the web to solve alot
                     of your coding insecurities.
                 </Heading>
-                <Heading as="h3" variant="section-title" color={"grassTeal"}>
+                <Heading as="h3" variant="section-title" color={"yellow.300"}>
                     Must have websites.
                 </Heading>
                 <SimpleGrid columns={[1, 2, 2]}
@@ -95,7 +95,7 @@ export default function Resources() {
 
                 </SimpleGrid>
 
-                <Heading as="h3" variant="section-title" color={"grassTeal"}>
+                <Heading as="h3" variant="section-title" color={"yellow.300"}>
                     Flutter related
                 </Heading>
 
@@ -136,7 +136,7 @@ export default function Resources() {
 
 
 
-                <Heading as="h3" variant="section-title" color={"grassTeal"}>
+                <Heading as="h3" variant="section-title" color={"yellow.300"}>
                     Used Way too common.
                 </Heading>
                 <SimpleGrid columns={{ base: 1, xl: 2 }}
