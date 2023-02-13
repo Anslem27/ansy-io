@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layouts/article'
-import { Container, Heading, Link, Divider, Box, Input, Text, SimpleGrid } from '@chakra-ui/react'
+import { Container, Heading, Link, Divider, Box, Text, SimpleGrid } from '@chakra-ui/react'
 import { IoGameController, IoInformationCircleOutline } from 'react-icons/io5'
 import { WorkImage } from '.././components/work'
 import Section from '../components/section'
@@ -11,7 +11,7 @@ const Games = () => {
         <Layout title="My Gaming Stories">
             <Container>
                 <Heading as="h1" fontSize={22} mb={4}>
-                    Gaming Memories
+                    Gaming Memoir
                 </Heading>
                 <Heading as="h3" fontSize={18} paddingBottom={10}>
                     <Heading as="h3" variant="section-title">
