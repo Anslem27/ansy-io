@@ -26,7 +26,7 @@ const Logo = () => {
     <Link href="/" scroll={false}>
       <a>
         <LogoBox>
-          {/* Rabbit Icon */}
+          {/* Icon */}
           <Image src={"/rabbit.png"} width={25} height={25} />
           {/* Name in logo */}
           <Text
