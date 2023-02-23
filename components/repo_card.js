@@ -1,7 +1,6 @@
 import NextLink from 'next/link'
-import { Box, Text, LinkBox, LinkOverlay, Flex } from '@chakra-ui/react'
+import { Box, Text, LinkBox, LinkOverlay, Spacer } from '@chakra-ui/react'
 import { IoLogoGithub, IoStar, IoArchiveOutline } from 'react-icons/io5'
-
 
 export const RepoCard = ({ repo }) => (
     <Box w="100%" textAlign="center" padding={3} margin={1}
@@ -12,7 +11,7 @@ export const RepoCard = ({ repo }) => (
             borderColor: "#fbd38d"
         }} overflow='hidden' borderColor='grassTeal' justifyContent="center">
         <NextLink href={repo.html_url} passHref scroll={false}>
-            <LinkBox cursor="pointer">
+            <LinkBox cursor="pointer" >
                 <IoLogoGithub size={35} >
                 </IoLogoGithub>
                 <LinkOverlay href={repo.html_url}>
@@ -21,20 +20,23 @@ export const RepoCard = ({ repo }) => (
                     </Text>
                 </LinkOverlay>
                 <Text fontSize={14}>{repo.description}</Text>
-                <Flex alignItems="center" padding="10px"> <IoStar color='fbd38d'></IoStar>
-                    <Box><Text>
-                        {repo.stargazers_count === 0 ? "No stars" :
-                            repo.stargazers_count === 1 ? "1 Star" :
-                                repo.stargazers_count + " stars"
-                        }
-                    </Text></Box>
-                    <Box marginLeft={2}></Box>
-                    <IoArchiveOutline color='f35fba'></IoArchiveOutline>
+
+                <Text >
+                    {repo.stargazers_count === 0 ? "No stars" :
+                        repo.stargazers_count === 1 ? "1 Star" :
+                            repo.stargazers_count + " stars"
+                    }
+                </Text>
+
+
+                {/*  <IoArchiveOutline color='f35fba'></IoArchiveOutline>
                     <Box><Text>
                         {repo.archived === true ? "Archived: Yes" : "Archived: No"}
-                    </Text></Box>
-                </Flex>
-                <Text color="#1DA1F2" fontSize={12}>{"Language: " + repo.language}</Text>
+                    </Text></Box> */}
+
+                <Text color={repo.language === "Dart" ? "#1DA1F2" :
+                    "#F08080"
+                } fontSize={12}>{"Language: " + repo.language}</Text>
             </LinkBox>
         </NextLink>
     </Box>

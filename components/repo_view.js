@@ -7,7 +7,7 @@ const RepoView = ({ reposToDisplay }) => {
     if (Array.isArray(reposToDisplay)) {
         return (
             <SimpleGrid
-                columns={{ base: 1, xl: 2 }}
+                columns={[2, 2, 2]}
                 spacing={'5'}
                 mt={16}
                 width={{ xl: "2xl" }}

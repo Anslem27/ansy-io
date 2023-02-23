@@ -17,7 +17,7 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { IoLogoTwitter, IoLogoGithub, IoArrowForward } from 'react-icons/io5'
-
+import { MediumSampleHome } from './blog'
 import Image from 'next/image'
 
 import {
@@ -180,7 +180,9 @@ const Home = () => (
           , Oneplus Mobile, Mobile App development.
         </Paragraph>
       </Section>
-
+ {/*      <Section delay={0.3}>
+        <MediumSampleHome />
+      </Section> */}
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           Links and Socials
