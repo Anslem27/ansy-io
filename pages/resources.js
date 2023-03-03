@@ -1,7 +1,7 @@
 import Layout from '../components/layouts/article'
 import { Container, Heading, Divider, SimpleGrid } from '@chakra-ui/react';
 import ResourcesCard from "../components/resource_card";
-import { IoGift } from 'react-icons/io5'
+import { Gift } from 'phosphor-react';
 
 
 export default function Resources() {
@@ -9,23 +9,20 @@ export default function Resources() {
     return (
         <Layout title="Resources">
             <Container>
-                <Heading as="h1" fontSize={22} mb={4}>
-                    Resources
-                </Heading>
+
                 <Heading as="h3" fontSize={17} paddingBottom={10}>
                     <Heading as="h3" variant="section-title">
-                        A collection of helpful resources on the internet
-                    </Heading> <IoGift color='yellow.300'>
-                    </IoGift>
-                    these are a collection of awesome useful websites across the web to solve alot
-                    of your coding insecurities.
+                        Resources
+                    </Heading> <Gift color='yellow.300'>
+                    </Gift>
+                    A collection of helpful resources on the internet
                 </Heading>
-                <Heading as="h3" variant="section-title" color={"yellow.300"}>
+                <Heading as="h3" variant="section-title" color={"yellow.500"}>
                     Must have websites.
                 </Heading>
                 <SimpleGrid columns={[1, 2, 2]}
-                    spacing={'1'}
-                    mt={16}
+                    spacing={'0.5'}
+                    mt={5}
                     width={{ xl: "3xl" }}
                     mx={'auto'}>
                     <ResourcesCard
@@ -69,12 +66,6 @@ export default function Resources() {
                         description="Color schemes for a page"
                     />
                     <ResourcesCard
-                        title="Free Illustrations"
-                        link="https://lukaszadam.com/illustrations"
-                        websiteLink="lukaszadam.com"
-                        description="Free illustrations and icons"
-                    />
-                    <ResourcesCard
                         title="Paper Illustrations"
                         link="https://iconscout.com/paper-illustrations"
                         websiteLink="iconscout.com"
@@ -95,13 +86,13 @@ export default function Resources() {
 
                 </SimpleGrid>
 
-                <Heading as="h3" variant="section-title" color={"yellow.300"}>
-                    Flutter related
+                <Heading as="h3" variant="section-title" color={"yellow.500"}>
+                    Flutter resources
                 </Heading>
 
                 <SimpleGrid columns={{ base: 1, xl: 2 }}
-                    spacing={'1'}
-                    mt={16}
+                    spacing={'0.5'}
+                    mt={5}
                     width={{ xl: "3xl" }}
                     mx={'auto'}>
 
@@ -136,12 +127,12 @@ export default function Resources() {
 
 
 
-                <Heading as="h3" variant="section-title" color={"yellow.300"}>
+                <Heading as="h3" variant="section-title" color={"yellow.500"}>
                     Used Way too common.
                 </Heading>
                 <SimpleGrid columns={{ base: 1, xl: 2 }}
-                    spacing={'1'}
-                    mt={16}
+                    spacing={'0.5'}
+                    mt={5}
                     width={{ xl: "3xl" }}
                     mx={'auto'}>
                     <ResourcesCard
