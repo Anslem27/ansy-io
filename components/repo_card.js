@@ -34,12 +34,44 @@ export const RepoCard = ({ repo }) => (
                         {repo.archived === true ? "Archived: Yes" : "Archived: No"}
                     </Text></Box> */}
 
-                <Text color={repo.language === "Dart" ? "#1DA1F2" :
-                    "#F08080"
-                } fontSize={12}>{"Language: " + repo.language}</Text>
+                <Text
+                    color={getLanguageColor(repo.language)}
+                    fontSize={12}
+                    padding={2}
+                >
+                    {"Language: " + repo.language}
+                </Text>
+
             </LinkBox>
         </NextLink>
     </Box>
 )
 
 export default RepoCard
+
+
+
+const getLanguageColor = (language) => {
+    switch (language) {
+        case "JavaScript":
+            return "#f7df1e";
+        case "TypeScript":
+            return "#007acc";
+        case "Python":
+            return "#3572a5";
+        case "Java":
+            return "#b07219";
+        case "Go":
+            return "#00add8";
+        case "C#":
+            return "#178600";
+        case "C++":
+            return "#f34b7d";
+        case "Ruby":
+            return "#701516";
+        case "Dart":
+            return "#1DA1F2";
+        default:
+            return "#F08080";
+    }
+};
