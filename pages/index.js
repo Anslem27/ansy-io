@@ -29,7 +29,11 @@ const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
 })
 
+const playlistId = '42pGzyX8klSJGY4cxKghow';
+
 const Home = () => (
+
+
   <Layout>
     <Container>
       <Box
@@ -68,7 +72,7 @@ const Home = () => (
           >
             {/* Logo */}
             <ProfileImage
-              src="/images/avatar.png"
+              src="/images/avatar.jpeg"
               alt="Profile image/logo"
               borderRadius="full"
               width="150%"
@@ -116,7 +120,7 @@ const Home = () => (
         </BioSection>
         <BioSection>
           <BioYear>2022</BioYear>
-          Started and is still pursuing a Bachelors&apos;s degree at Kyamboggo University
+          Started and is still pursuing a Bachelors&apos;s degree.
 
         </BioSection>
       </Section>
@@ -180,10 +184,10 @@ const Home = () => (
           , Oneplus Mobile, Mobile App development.
         </Paragraph>
       </Section>
- {/*      <Section delay={0.3}>
+      {/*      <Section delay={0.3}>
         <MediumSampleHome />
       </Section> */}
-      <Section delay={0.3}>
+      {/*  <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           Links and Socials
         </Heading>
@@ -230,7 +234,22 @@ const Home = () => (
             </Button>
           </NextLink>
         </Box>
-      </Section>
+      </Section> */}
+
+      <Heading as="h3" variant="section-title">
+        Dont get bored while your here.
+      </Heading>
+      <iframe
+        title="Spotify Embed: Recommendation Playlist "
+        src={`https://open.spotify.com/embed/playlist/42pGzyX8klSJGY4cxKghow?utm_source=generator&theme=0`}
+        width="100%"
+        height="100%"
+        style={{ minHeight: '360px' }}
+        // frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+
+      />
     </Container>
   </Layout>
 )

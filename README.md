@@ -39,6 +39,8 @@ $PROJECT_ROOT
 └── public
 ```
 
+### Get spotify refresh token. [here](https://alecchen.dev/spotify-refresh-token/)
+
 ## License
 
 MIT License.
