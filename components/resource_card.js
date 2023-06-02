@@ -32,48 +32,43 @@ export default function ResourcesCard({
                     borderColor: "#fbd38d",
                 }}
             >
-                <Link href={link}>
-                    <a
-                        {...rest}
-                        target="__blank"
-                    >
+                <Link href={link} {...rest} target="__blank">
 
-                        <div
+                    <div
+                        style={{
+                            display: "flex",
+                            alignItems: "center",
+                            color: "grassTeal",
+                            color: "grassTeal",
+                        }}
+                    >
+                        <span
                             style={{
-                                display: "flex",
-                                alignItems: "center",
+                                display: "inline-block",
+                                marginTop: "1px",
                                 color: "grassTeal",
                                 color: "grassTeal",
                             }}
+                            className="dark:text-gray-400"
                         >
-                            <span
-                                style={{
-                                    display: "inline-block",
-                                    marginTop: "1px",
-                                    color: "grassTeal",
-                                    color: "grassTeal",
-                                }}
-                                className="dark:text-gray-400"
-                            >
-                                {websiteLink}
-                            </span>
+                            {websiteLink}
+                        </span>
 
-                            <ChevronRightIcon />
-                        </div>
-                        <Heading
-                            display="inline-block" as="h3" fontSize={20} mb={4}
-                            color="linear-gradient(135deg, #6b92b9, #39d3d7)"
-                            _hover={{
-                                transform: "scale(1.02)",
+                        <ChevronRightIcon />
+                    </div>
+                    <Heading
+                        display="inline-block" as="h3" fontSize={20} mb={4}
+                        color="linear-gradient(135deg, #6b92b9, #39d3d7)"
+                        _hover={{
+                            transform: "scale(1.02)",
 
-                            }}>
-                            {title}
-                        </Heading>
-                        <p style={{ marginTop: "1px", color: "grassTeal", color: "grassTeal" }} className="dark:text-gray-400">
-                            {description}
-                        </p>
+                        }}>
+                        {title}
+                    </Heading>
+                    <p style={{ marginTop: "1px", color: "grassTeal", color: "grassTeal" }} className="dark:text-gray-400">
+                        {description}
+                    </p>
 
-                    </a>
                 </Link>
             </Box>
         </motion.div>

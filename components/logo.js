@@ -23,24 +23,24 @@ const LogoBox = styled.span`
 
 const Logo = () => {
   return (
-    <Link href="/" scroll={false}>
-      <a>
-        <LogoBox>
-          {/* Icon */}
-          <Image src={"/rabbit.png"} width={25} height={25} />
-          {/* Name in logo */}
-          <Text
-            color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-            fontFamily='M PLUS Rounded 1c", sans-serif'
-            fontWeight="bold"
-            ml={3}
-          >
-            Anslem Seguya
-          </Text>
-        </LogoBox>
-      </a>
-    </Link>
-  )
+    (<Link href="/" scroll={false}>
+
+      <LogoBox>
+        {/* Icon */}
+        <Image src={"/rabbit.png"} width={30} height={25} />
+        {/* Name in logo */}
+        <Text
+          color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+          fontFamily='M PLUS Rounded 1c", sans-serif'
+          fontWeight="bold"
+          ml={3}
+        >
+          Anslem Seguya
+        </Text>
+      </LogoBox>
+
+    </Link>)
+  );
 }
 
 export default Logo

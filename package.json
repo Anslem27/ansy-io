@@ -18,27 +18,27 @@
   "author": "Anslem Seguya",
   "license": "MIT",
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.8",
-    "@chakra-ui/react": "^2.2.8",
-    "@emotion/react": "^11.10.0",
-    "@emotion/styled": "^11.10.0",
-    "framer-motion": "^7.2.0",
-    "isomorphic-unfetch": "^4.0.1",
-    "next": "^12.3.1",
+    "@chakra-ui/icons": "^2.0.19",
+    "@chakra-ui/react": "^2.7.0",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "framer-motion": "^10.12.16",
+    "isomorphic-unfetch": "^4.0.2",
+    "next": "^13.4.4",
     "phosphor-react": "^1.4.1",
     "querystring": "^0.2.1",
     "react": "^18.2.0",
     "react-code-blocks": "^0.0.9-0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.4.0",
-    "three": "^0.143.0"
+    "react-icons": "^4.9.0",
+    "three": "^0.153.0"
   },
   "devDependencies": {
-    "@types/node": "^18.11.18",
-    "@types/react": "18.0.26",
-    "eslint": "^8.22.0",
-    "eslint-config-next": "^12.2.5",
-    "prettier": "^2.7.1",
-    "typescript": "^4.9.4"
+    "@types/node": "^20.2.5",
+    "@types/react": "^18.2.8",
+    "eslint": "^8.41.0",
+    "eslint-config-next": "^13.4.4",
+    "prettier": "^2.8.8",
+    "typescript": "^5.1.3"
   }
 }

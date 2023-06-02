@@ -16,12 +16,12 @@ const NotFound = () => {
       <Text pl={4}>Try looking for a typo in the link address.</Text>
       <Divider my={6} />
       <Box my={6} align="center">
-        <NextLink href="/" passHref>
+        <NextLink href="/" passHref legacyBehavior>
           <Button colorScheme="yellow">Return to home</Button>
         </NextLink>
       </Box>
     </Container>
-  )
+  );
 }
 
 export default NotFound

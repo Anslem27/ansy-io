@@ -10,7 +10,7 @@ export const RepoCard = ({ repo }) => (
             boxShadow: "lg",
             borderColor: "#fbd38d"
         }} overflow='hidden' borderColor='grassTeal' justifyContent="center">
-        <NextLink href={repo.html_url} passHref scroll={false}>
+        <NextLink href={repo.html_url} passHref scroll={false} legacyBehavior>
             <LinkBox cursor="pointer" >
                 <IoLogoGithub size={35} >
                 </IoLogoGithub>

@@ -5,8 +5,6 @@ import {
   Heading,
   Box,
   Button,
-  List,
-  ListItem,
   useColorModeValue,
   chakra,
   Text
@@ -16,13 +14,8 @@ import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { IoLogoTwitter, IoLogoGithub, IoArrowForward } from 'react-icons/io5'
-import { MediumSampleHome } from './blog'
+import { IoLogoGithub, IoArrowForward } from 'react-icons/io5'
 import Image from 'next/image'
-
-import {
-  MediumLogo
-} from 'phosphor-react'
 
 
 const ProfileImage = chakra(Image, {
@@ -75,8 +68,8 @@ const Home = () => (
               src="/images/avatar.jpeg"
               alt="Profile image/logo"
               borderRadius="full"
-              width="150%"
-              height="150%"
+              width={150}
+              height={150}
               objectFit={20}
             />
           </Box>
@@ -96,13 +89,13 @@ const Home = () => (
           development techniques in next js as well as advancing his skills in mobile app development.
           {' '}
           . He also has passion for writing articles primarily about coding and lots of other stuff on &quot;
-          <NextLink href="https://medium.com/@anslemAnsy" passHref>
+          <NextLink href="https://medium.com/@anslemAnsy" passHref legacyBehavior>
             <Link target="_blank">medium</Link>
           </NextLink>
           &quot;
         </Paragraph>
         <Box align="center" my={4}>
-          <NextLink href="/projects" passHref scroll={false}>
+          <NextLink href="/projects" passHref scroll={false} legacyBehavior>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="yellow">
               My projects
             </Button>
@@ -128,7 +121,7 @@ const Home = () => (
       <Heading as="h3" variant="section-title">
         Featured Projects
       </Heading>
-      <NextLink href="/works/gem" passHref scroll={false}>
+      <NextLink href="/works/gem" passHref scroll={false} legacyBehavior>
         <Link><Button
 
           variant="ghost"
@@ -152,7 +145,11 @@ const Home = () => (
         </Text>
       </Box>
 
-      <NextLink href="https://github.com/Anslem27/Anslem27.github.io" passHref scroll={false}>
+      <NextLink
+        href="https://github.com/Anslem27/Anslem27.github.io"
+        passHref
+        scroll={false}
+        legacyBehavior>
         <Link><Button
 
           variant="ghost"
@@ -181,60 +178,8 @@ const Home = () => (
           <Link href="https://flutter.dev/" target="_blank">
             Flutter
           </Link>
-          , Oneplus Mobile, Mobile App development.
         </Paragraph>
       </Section>
-      {/*      <Section delay={0.3}>
-        <MediumSampleHome />
-      </Section> */}
-      {/*  <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
-          Links and Socials
-        </Heading>
-        <List>
-          <ListItem>
-            <Link href="https://github.com/Anslem27" target="_blank">
-              <Button
-
-                variant="ghost"
-                colorScheme="yellow"
-                leftIcon={<IoLogoGithub />}
-              >
-                Anslem27
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/anslemAnsy" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="yellow"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @anslemAnsy
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://medium.com/@anslemAnsy" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="yellow"
-                leftIcon={<MediumLogo />}
-              >
-                Anslem
-              </Button>
-            </Link>
-          </ListItem>
-        </List>
-        <Box align="center" my={4}>
-          <NextLink href="/games" passHref scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="yellow">
-              Gaming memoir
-            </Button>
-          </NextLink>
-        </Box>
-      </Section> */}
 
       <Heading as="h3" variant="section-title">
         Dont get bored while your here.
@@ -244,12 +189,20 @@ const Home = () => (
         src={`https://open.spotify.com/embed/playlist/42pGzyX8klSJGY4cxKghow?utm_source=generator&theme=0`}
         width="100%"
         height="100%"
-        style={{ minHeight: '360px' }}
+        style={{ minHeight: '360px', pt: "20px" }}
         // frameBorder="0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
-
       />
+
+
+      <Box align="center" my={4}>
+        <NextLink href="/games" passHref scroll={false}>
+          <Button rightIcon={<ChevronRightIcon />} colorScheme="yellow">
+            Gaming memoir
+          </Button>
+        </NextLink>
+      </Box>
     </Container>
   </Layout>
 )
