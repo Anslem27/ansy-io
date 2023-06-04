@@ -77,11 +77,11 @@ const Navbar = props => {
           <LinkItem href="/projects" path={path}>
             Projects
           </LinkItem>
-         {/*  <LinkItem href="/blog" path={path}>
+          {/*  <LinkItem href="/blog" path={path}>
             Blog
           </LinkItem> */}
-          <LinkItem href="/resources" path={path}>
-            Resources
+          <LinkItem href="/blog" path={path}>
+            Blog
           </LinkItem>
           <LinkItem
             href="/git"
@@ -112,11 +112,14 @@ const Navbar = props => {
                 <NextLink href="/" passHref legacyBehavior>
                   <MenuItem as={Link}>About</MenuItem>
                 </NextLink>
+                <NextLink href="/blog" passHref legacyBehavior>
+                  <MenuItem as={Link}>Blog</MenuItem>
+                </NextLink>
                 <NextLink href="/projects" passHref legacyBehavior>
                   <MenuItem as={Link}>Projects</MenuItem>
                 </NextLink>
                 <NextLink href="/games" passHref legacyBehavior>
-                  <MenuItem as={Link}>Game Story</MenuItem>
+                  <MenuItem as={Link}>Game memoir</MenuItem>
                 </NextLink>
                 <NextLink href="/resources" passHref legacyBehavior>
                   <MenuItem as={Link}>Resources</MenuItem>

@@ -7,7 +7,7 @@ import {
   Button,
   useColorModeValue,
   chakra,
-  Text
+  Text, extendTheme, Flex,
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
@@ -16,7 +16,8 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { IoLogoGithub, IoArrowForward } from 'react-icons/io5'
 import Image from 'next/image'
-
+import { GameController, Code, Pencil } from 'phosphor-react'
+import styled from "@emotion/styled";
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -66,7 +67,7 @@ const Home = () => (
             {/* Logo */}
             <ProfileImage
               src="/images/avatar.jpeg"
-              alt="Profile image/logo"
+              alt="Profile logo"
               borderRadius="full"
               width={150}
               height={150}
@@ -96,14 +97,14 @@ const Home = () => (
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/projects" passHref scroll={false} legacyBehavior>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="yellow">
+            <Button rightIcon={<Code />} colorScheme="pink">
               My projects
             </Button>
           </NextLink>
         </Box>
       </Section>
 
-      <Section delay={0.2}>
+      {/* <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
           Bio
         </Heading>
@@ -116,7 +117,33 @@ const Home = () => (
           Started and is still pursuing a Bachelors&apos;s degree.
 
         </BioSection>
-      </Section>
+      </Section> */}
+      <Heading as="h3" variant="section-title">
+        Current Project
+      </Heading>
+      <GradientBox p={3}>
+        <Box display={{ md: 'flex' }}>
+          <Box flexGrow={1}>
+            <Flex flexDirection={"row"} ><Heading pr={3} as="h4" fontSize={22} color={"teal.300"}>
+              Writefolio
+            </Heading>
+              <Pencil />
+              <Text fontSize={10}>still in development</Text>
+            </Flex>
+            <p>material-3 mobile applocation for writers.</p>
+          </Box>
+          <Box
+            flexShrink={0}
+            mt={{ base: 4, md: 0 }}
+            ml={{ md: 6 }}
+            textAlign="center"
+          >
+
+            {/* Button */}
+
+          </Box>
+        </Box>
+      </GradientBox>
 
       <Heading as="h3" variant="section-title">
         Featured Projects
@@ -125,7 +152,7 @@ const Home = () => (
         <Link><Button
 
           variant="ghost"
-          colorScheme="yellow"
+          colorScheme="teal"
           leftIcon={<IoLogoGithub />}
         >
           Gem Music
@@ -153,7 +180,7 @@ const Home = () => (
         <Link><Button
 
           variant="ghost"
-          colorScheme="yellow"
+          colorScheme="pink"
           leftIcon={<IoLogoGithub />}
         >
           Anslem.io
@@ -165,7 +192,7 @@ const Home = () => (
         </Text>
       </Box>
 
-      <Section delay={0.3}>
+      {/*  <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           I 💙
         </Heading>
@@ -179,26 +206,28 @@ const Home = () => (
             Flutter
           </Link>
         </Paragraph>
-      </Section>
+      </Section> */}
 
-      <Heading as="h3" variant="section-title">
-        Dont get bored while your here.
-      </Heading>
-      <iframe
-        title="Spotify Embed: Recommendation Playlist "
-        src={`https://open.spotify.com/embed/playlist/42pGzyX8klSJGY4cxKghow?utm_source=generator&theme=0`}
-        width="100%"
-        height="100%"
-        style={{ minHeight: '360px', pt: "20px" }}
-        // frameBorder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-      />
+      <Section delay={0.4}>
+        <Heading as="h3" variant="section-title">
+          Dont get bored while your here.
+        </Heading>
+        <iframe
+          title="Spotify Embed: Recommendation Playlist "
+          src={`https://open.spotify.com/embed/playlist/42pGzyX8klSJGY4cxKghow?utm_source=generator&theme=0`}
+          width="100%"
+          height="100%"
+          style={{ minHeight: '360px', pt: "20px", borderRadius: "14px" }}
+          // frameBorder="8"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        />
+      </Section>
 
 
       <Box align="center" my={4}>
         <NextLink href="/games" passHref scroll={false}>
-          <Button rightIcon={<ChevronRightIcon />} colorScheme="yellow">
+          <Button rightIcon={<GameController />} colorScheme="pink">
             Gaming memoir
           </Button>
         </NextLink>
@@ -209,3 +238,14 @@ const Home = () => (
 
 export default Home
 export { getServerSideProps } from '../components/chakra'
+
+
+/* box with slick radial bottom left gradient */
+const GradientBox = styled(Box)`
+ border-inline-start: 1px solid;
+ border-block-end: 1px solid;
+ padding:10px;
+ border-image-source:radial-gradient(circle at bottom left,#fbd38d,#aa98a9,transparent 10%);
+ border-image-slice:1;
+
+`;
