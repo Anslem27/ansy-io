@@ -1,50 +1,55 @@
 import NextLink from 'next/link'
-import { Box, Text, LinkBox, LinkOverlay, Spacer } from '@chakra-ui/react'
+import { Box, Text, LinkBox, LinkOverlay, Spacer, Flex } from '@chakra-ui/react'
 import { IoLogoGithub, IoStar, IoArchiveOutline } from 'react-icons/io5'
+import styled from "@emotion/styled";
+
 
 export const RepoCard = ({ repo }) => (
-    <Box w="100%" textAlign="center" padding={3} margin={1}
-        borderWidth='1px' borderRadius='lg'
-        _hover={{
-            transform: "scale(1.02)",
-            boxShadow: "lg",
-            borderColor: "#fbd38d"
-        }} overflow='hidden' borderColor='grassTeal' justifyContent="center">
-        <NextLink href={repo.html_url} passHref scroll={false} legacyBehavior>
-            <LinkBox cursor="pointer" >
-                <IoLogoGithub size={35} >
-                </IoLogoGithub>
-                <LinkOverlay href={repo.html_url}>
-                    <Text mt={2} fontSize={20}>
-                        {repo.name}
+
+    <Box>
+
+        <GradientBox>
+            <Flex justify="start" align="start" direction="row" p={3} w="100%">
+
+
+                <Flex display="flex" flexDirection="column">
+
+                    <NextLink href={repo.html_url}>
+                        <Text fontSize={20} fontWeight="bold">
+                            {repo.name}
+                        </Text>
+                    </NextLink>
+
+                    <Text
+                        color={getLanguageColor(repo.language)}
+                        fontSize={12}
+
+                    >
+                        {"Written in " + repo.language}
                     </Text>
-                </LinkOverlay>
-                <Text fontSize={14}>{repo.description}</Text>
+                    <Flex wrap="wrap">
+                        <Box>
+                            <Flex flexDirection={"row"} >
+                                <Text fontSize={10}>
+                                    {repo.archived === true ? "Repository is archived with " : "archived with "}
+                                </Text>
+                                <Text fontSize={10} pl={1}>
+                                    {repo.stargazers_count === 0 ? " no stars" :
+                                        repo.stargazers_count === 1 ? " 1 star" :
+                                            repo.stargazers_count + " stars"
+                                    }
+                                </Text>
+                            </Flex>
+                        </Box>
+                    </Flex>
+                </Flex>
 
-                <Text >
-                    {repo.stargazers_count === 0 ? "No stars" :
-                        repo.stargazers_count === 1 ? "1 Star" :
-                            repo.stargazers_count + " stars"
-                    }
-                </Text>
+                <IoLogoGithub />
+            </Flex>
+        </GradientBox>
 
-
-                {/*  <IoArchiveOutline color='f35fba'></IoArchiveOutline>
-                    <Box><Text>
-                        {repo.archived === true ? "Archived: Yes" : "Archived: No"}
-                    </Text></Box> */}
-
-                <Text
-                    color={getLanguageColor(repo.language)}
-                    fontSize={12}
-                    padding={2}
-                >
-                    {"Language: " + repo.language}
-                </Text>
-
-            </LinkBox>
-        </NextLink>
     </Box>
+
 )
 
 export default RepoCard
@@ -75,3 +80,13 @@ const getLanguageColor = (language) => {
             return "#F08080";
     }
 };
+
+/* box with slick radial bottom left gradient */
+const GradientBox = styled(Box)`
+ border-inline-start: 1px solid;
+ border-block-end: 1px solid;
+ padding:10px;
+ border-image-source:radial-gradient(circle at bottom left,#fbd38d,#aa98a9,transparent 10%);
+ border-image-slice:1;
+
+`;

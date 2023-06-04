@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import RepoView from '../components/repo_view'
 import Layout from '../components/layouts/article'
-import { Container, Heading, Link, Divider, Box, Input, Text } from '@chakra-ui/react'
+import { Container, Heading, Link, Divider, Box, Input, Text, Flex } from '@chakra-ui/react'
 import { IoLogoGithub } from 'react-icons/io5'
 
 export default function Git({ repos }) {
@@ -34,18 +34,23 @@ export default function Git({ repos }) {
   return (
     <Layout title="GitHub Projects">
       <Container>
-        <Heading as="h1" fontSize={22} mb={4}>
-          Github Projects
-        </Heading>
-        <Heading as="h3" fontSize={18} paddingBottom={10}>
-          <Heading as="h3" variant="section-title">
-            Am a
-          </Heading> <IoLogoGithub>
-          </IoLogoGithub><Link href="https://github.com/Anslem27">Github </Link>
-          user, and here below are my projects.
-        </Heading>
-        <Text color="#1DA1F2" >{"Total Stars: " + totalStargazers} </Text>
-        <Input type="text" placeholder="Search for a repo by name or description" onChange={handleChange} height={45} padding={5} />
+        <Flex flexDirection={"row"}>
+          <Heading as="h1" fontSize={22} mb={4} pr={3}>
+            Github Projects
+          </Heading>
+          <IoLogoGithub />
+        </Flex>
+        <Text color="#1DA1F2" fontSize={12} >
+          {"Total Stars: " + totalStargazers}
+        </Text>
+        <Box p={5}>
+          <Input type="text"
+            placeholder="Search for a repo by name or description"
+            onChange={handleChange}
+            height={45}
+            padding={5}
+          />
+        </Box>
         <Box height={5} />
         <RepoView reposToDisplay={searchResults} />
       </Container>
