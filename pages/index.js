@@ -223,15 +223,6 @@ const Home = () => (
           loading="lazy"
         />
       </Section>
-
-
-      <Box align="center" my={4}>
-        <NextLink href="/games" passHref scroll={false}>
-          <Button rightIcon={<GameController />} colorScheme="pink">
-            Gaming memoir
-          </Button>
-        </NextLink>
-      </Box>
     </Container>
   </Layout>
 )

@@ -118,9 +118,6 @@ const Navbar = props => {
                 <NextLink href="/projects" passHref legacyBehavior>
                   <MenuItem as={Link}>Projects</MenuItem>
                 </NextLink>
-                <NextLink href="/games" passHref legacyBehavior>
-                  <MenuItem as={Link}>Game memoir</MenuItem>
-                </NextLink>
                 <NextLink href="/resources" passHref legacyBehavior>
                   <MenuItem as={Link}>Resources</MenuItem>
                 </NextLink>
