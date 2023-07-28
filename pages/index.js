@@ -148,7 +148,13 @@ const Home = () => {
             </Button></Link>
           </NextLink>
           <Box display={"flex"} flexDirection="row" alignItems={"center"}>
-            <IoArrowForward color='71cbc0'></IoArrowForward>
+            <Image
+              src="https://github.com/Anslem27/poemtopia-site/blob/master/public/android-chrome-192x192.png?raw=true"
+              alt="Poemtopia logo"
+              className="grid-item-thumbnail"
+              width={50}
+              height={50}
+            />
             <Text paddingLeft={5}>Poemtopia is a modern ebook and poem app that aims to provide users with a poetic utopia. It is a place where poetry enthusiasts can explore, and be inspired by the world of poetry
             </Text>
           </Box>
@@ -204,20 +210,7 @@ const Home = () => {
           </Text>
           <div>
             {isLoading && (
-              <Box
-                position="absolute"
-                top="0"
-                left="0"
-                width="100%"
-                height="100%"
-                bg="rgba(0, 0, 0, 0.8)"
-                borderRadius="14px"
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-              >
-                <Spinner size="lg" color="white" />
-              </Box>
+              <Spinner size="lg" color="white" />
             )}
             <iframe
               title="Spotify Embed: Recommendation Playlist"

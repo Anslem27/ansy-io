@@ -1,10 +1,8 @@
-import { Box, Text, LinkBox, LinkOverlay, Flex } from '@chakra-ui/react';
-import NextLink from 'next/link';
-import Image from "next/image";
-import React from 'react';
+import { Box, Text, Link, Flex } from '@chakra-ui/react';
 import { formatDistanceToNow, parseISO } from 'date-fns';
-import styled from "@emotion/styled";
-
+import Image from 'next/image';
+import React from 'react';
+import styled from '@emotion/styled';
 
 export const MediumGridItem = ({ article }) => {
     const myLoader = ({ src }) => {
@@ -22,55 +20,50 @@ export const MediumGridItem = ({ article }) => {
 
     return (
         <Box p={5}>
-            <GradientBox>
-                <Flex justify="start" align="start" direction="row" p={3} w="100%">
-                    <NextLink href={article.link} passHref scroll={false} legacyBehavior>
-                        <LinkBox cursor="pointer">
-                            {/*  <Box padding={3}>
+            <Flex justify="start" align="start" direction="row" p={3} w="100%">
+                <Link href={article.link} passHref>
+                    <Box cursor="pointer" padding={3}>
                         <Image
                             loader={myLoader}
                             src={`${article.thumbnail}`}
                             alt={article.title}
                             className="grid-item-thumbnail"
-                            width={150}
-                            height={150}
+                            width={200}
+                            height={200}
                         />
-                    </Box> */}
-                        </LinkBox>
-                    </NextLink>
-                    <LinkOverlay href={article.link} passHref>
-                        <Flex display="flex" flexDirection="column">
-                            <Text mt={2} fontSize={15} pb={2} fontWeight="bold">
-                                {article.title}
-                            </Text>
-                            <Text fontSize={10}>{formattedDate}</Text>
-                            <Flex wrap="wrap" mt={2}>
-                                {article.categories.map((category, index) => (
-                                    <Text
-                                        key={category}
-                                        color={colors[index % colors.length]}
-                                        mr={2}
-                                        fontSize={10}
-                                        textTransform="capitalize"
-                                    >
-                                        {category}
-                                    </Text>
-                                ))}
-                            </Flex>
+                    </Box>
+                </Link>
+                <Link href={article.link} passHref>
+                    <Flex display="flex" flexDirection="column">
+                        <Text mt={2} fontSize={15} fontWeight="bold">
+                            {article.title}
+                        </Text>
+                        <Text fontSize={10}>{formattedDate}</Text>
+                        <Flex wrap="wrap" mt={2}>
+                            {article.categories.map((category, index) => (
+                                <Text
+                                    key={category}
+                                    color={colors[index % colors.length]}
+                                    mr={2}
+                                    fontSize={10}
+                                    textTransform="capitalize"
+                                >
+                                    {category}
+                                </Text>
+                            ))}
                         </Flex>
-                    </LinkOverlay>
-                </Flex>
-            </GradientBox>
+                    </Flex>
+                </Link>
+            </Flex>
         </Box>
     );
 };
 
 /* box with slick radial bottom left gradient */
 const GradientBox = styled(Box)`
- border-inline-start: 1px solid;
- border-block-end: 1px solid;
- padding:10px;
- border-image-source:radial-gradient(circle at bottom left,#fbd38d,#aa98a9,transparent 10%);
- border-image-slice:1;
-
+  border-inline-start: 1px solid;
+  border-block-end: 1px solid;
+  padding: 10px;
+  border-image-source: radial-gradient(circle at bottom left, #fbd38d, #aa98a9, transparent 10%);
+  border-image-slice: 1;
 `;

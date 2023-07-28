@@ -1,20 +1,19 @@
-
-import { useState } from 'react'
-import RepoView from '../components/repo_view'
-import Layout from '../components/layouts/article'
-import { Container, Heading, Link, Divider, Box, Input, Text, Flex } from '@chakra-ui/react'
-import { IoLogoGithub } from 'react-icons/io5'
+import { useState } from 'react';
+import RepoView from '../components/repo_view';
+import Layout from '../components/layouts/article';
+import { Container, Heading, Link, Divider, Box, Input, Text, Flex, Spinner } from '@chakra-ui/react';
+import { IoLogoGithub } from 'react-icons/io5';
 
 export default function Git({ repos }) {
-  // const [searchTerm, setSearchTerm] = useState('')
-  const [searchResults, setSearchResults] = useState(repos)
+  const [searchResults, setSearchResults] = useState(repos);
+  const [isLoading, setIsLoading] = useState(false); // State for tracking loading
 
   const totalStargazers = repos.reduce((total, repo) => total + repo.stargazers_count, 0);
 
   const handleChange = (e) => {
-    // setSearchTerm(e.target.value)
-    filterRepos(e.target.value)
-  }
+    setIsLoading(true); // Set loading to true when searching
+    filterRepos(e.target.value);
+  };
 
   // filter repos by search term in name or description
   const filterRepos = (searchTerm) => {
@@ -22,14 +21,11 @@ export default function Git({ repos }) {
       return (
         repo?.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
         repo?.description?.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-    })
-    setSearchResults(filteredRepos)
-  }
-
-
-
-
+      );
+    });
+    setSearchResults(filteredRepos);
+    setIsLoading(false); // Set loading to false after filtering
+  };
 
   return (
     <Layout title="GitHub Projects">
@@ -40,11 +36,12 @@ export default function Git({ repos }) {
           </Heading>
           <IoLogoGithub />
         </Flex>
-        <Text color="#1DA1F2" fontSize={12} >
+        <Text color="#1DA1F2" fontSize={12}>
           {"Total Stars: " + totalStargazers}
         </Text>
         <Box p={5}>
-          <Input type="text"
+          <Input
+            type="text"
             placeholder="Search for a repo by name or description"
             onChange={handleChange}
             height={45}
@@ -52,12 +49,20 @@ export default function Git({ repos }) {
           />
         </Box>
         <Box height={5} />
-        <RepoView reposToDisplay={searchResults} />
+        {/* Check if data is still loading */}
+        {isLoading ? (
+          <Flex justify="center" align="center" height="200px">
+            <Spinner size="lg" color="pink.500" />
+          </Flex>
+        ) : (
+          // If not loading, display the RepoView component with search results
+          <RepoView reposToDisplay={searchResults} />
+        )}
       </Container>
 
       <Divider paddingBottom={5} paddingTop={5}></Divider>
     </Layout>
-  )
+  );
 }
 
 // get data from the GitHub Api

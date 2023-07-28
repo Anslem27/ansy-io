@@ -8,45 +8,45 @@ export const RepoCard = ({ repo }) => (
 
     <Box>
 
-        <GradientBox>
-            <Flex justify="start" align="start" direction="row" p={3} w="100%">
+
+        <Flex justify="start" align="start" direction="row" p={3} w="100%">
 
 
-                <Flex display="flex" flexDirection="column">
+            <Flex display="flex" flexDirection="column">
 
-                    <NextLink href={repo.html_url}>
-                        <Text fontSize={20} fontWeight="bold">
-                            {repo.name}
-                        </Text>
-                    </NextLink>
-
-                    <Text
-                        color={getLanguageColor(repo.language)}
-                        fontSize={12}
-
-                    >
-                        {"Written in " + repo.language}
+                <NextLink href={repo.html_url}>
+                    <Text fontSize={20} fontWeight="bold">
+                        {repo.name}
                     </Text>
-                    <Flex wrap="wrap">
-                        <Box>
-                            <Flex flexDirection={"row"} >
-                                <Text fontSize={10}>
-                                    {repo.archived === true ? "Repository is archived with " : "archived with "}
-                                </Text>
-                                <Text fontSize={10} pl={1}>
-                                    {repo.stargazers_count === 0 ? " no stars" :
-                                        repo.stargazers_count === 1 ? " 1 star" :
-                                            repo.stargazers_count + " stars"
-                                    }
-                                </Text>
-                            </Flex>
-                        </Box>
-                    </Flex>
-                </Flex>
+                </NextLink>
 
-                <IoLogoGithub />
+                <Text
+                    color={getLanguageColor(repo.language)}
+                    fontSize={12}
+
+                >
+                    {"Written in " + repo.language}
+                </Text>
+                <Flex wrap="wrap">
+                    <Box>
+                        <Flex flexDirection={"row"} >
+                            <Text fontSize={10}>
+                                {repo.archived === true ? "Repository is archived with " : "Not archived with "}
+                            </Text>
+                            <Text fontSize={10} pl={1}>
+                                {repo.stargazers_count === 0 ? " no stars" :
+                                    repo.stargazers_count === 1 ? " 1 star" :
+                                        repo.stargazers_count + " stars"
+                                }
+                            </Text>
+                        </Flex>
+                    </Box>
+                </Flex>
             </Flex>
-        </GradientBox>
+
+            <IoLogoGithub />
+        </Flex>
+
 
     </Box>
 

@@ -3,6 +3,7 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 import gem from '../public/images/projects/g-docs.png'
+import poemtopia from '../public/images/projects/poemtopia.png'
 import gemdocs from '../public/images/projects/g-pp.png'
 import anslemio from '../public/images/projects/ans-io.png'
 import flutterhiveapp from '../public/images/projects/hive-app.png'
@@ -17,6 +18,22 @@ const Works = () => (
       </Heading>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
+
+        <Section>
+          <WorkGridItem id="poemtopia" title={<Link href="https://poemtopia-site.vercel.app/">
+
+            Poemtopia</Link>} thumbnail={poemtopia}>
+            Poemtopia is a modern ebook and poem app that aims to provide users with a poetic utopia.
+            It is a place where poetry enthusiasts can explore, and be inspired by the world of poetry.
+          </WorkGridItem>
+          <Box display={"flex"} flexDirection="row" marginTop={"2"} justifySelf={"center"}>
+            <Badge colorScheme='blue' borderRadius={8}>FLUTTER</Badge>
+            <Box paddingLeft="2"> </Box>
+            <Badge colorScheme='blue' borderRadius={8}>DART</Badge>
+          </Box>
+        </Section>
+
+
         <Section>
           <WorkGridItem id="gem" title={<Link href="https://gem-one.vercel.app/">
 
@@ -25,9 +42,9 @@ const Works = () => (
             youtube, not forgetting an awesome modern UI.
           </WorkGridItem>
           <Box display={"flex"} flexDirection="row" marginTop={"2"} justifySelf={"center"}>
-            <Badge colorScheme='blue'>FLUTTER</Badge>
+            <Badge colorScheme='blue' borderRadius={8}>FLUTTER</Badge>
             <Box paddingLeft="2"> </Box>
-            <Badge colorScheme='blue'>DART</Badge>
+            <Badge colorScheme='blue' borderRadius={8}>DART</Badge>
           </Box>
         </Section>
         <Section>
@@ -42,9 +59,9 @@ const Works = () => (
             a very slick UI.
           </WorkGridItem>
           <Box display={"flex"} flexDirection="row" marginTop={"2"}>
-            <Badge colorScheme='blue'>FLUTTER</Badge>
+            <Badge colorScheme='blue' borderRadius={8}>FLUTTER</Badge>
             <Box paddingLeft="2"> </Box>
-            <Badge colorScheme='blue'>DART</Badge>
+            <Badge colorScheme='blue' borderRadius={8}>DART</Badge>
           </Box>
         </Section>
 
@@ -57,9 +74,9 @@ const Works = () => (
             A minimalistic dashboard ui template for editting markdown text
           </WorkGridItem>
           <Box display={"flex"} flexDirection="row" marginTop={"2"}>
-            <Badge colorScheme='blue'>FLUTTER</Badge>
+            <Badge colorScheme='blue' borderRadius={8}>FLUTTER</Badge>
             <Box paddingLeft="2"> </Box>
-            <Badge colorScheme='blue'>DART</Badge>
+            <Badge colorScheme='blue' borderRadius={8}>DART</Badge>
           </Box>
         </Section>
         <Section delay={0.1}>
@@ -69,9 +86,9 @@ const Works = () => (
             Landing page website for Gem App made with next Js.
           </WorkGridItem>
           <Box display={"flex"} flexDirection="row" marginTop={"2"}>
-            <Badge colorScheme='blue'>TYPESCRIPT</Badge>
+            <Badge colorScheme='blue' borderRadius={8}>TYPESCRIPT</Badge>
             <Box paddingLeft="2"> </Box>
-            <Badge colorScheme='blue'>JAVASCRIPT</Badge>
+            <Badge colorScheme='blue' borderRadius={8}>JAVASCRIPT</Badge>
           </Box>
         </Section>
       </SimpleGrid>
