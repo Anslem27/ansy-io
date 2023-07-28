@@ -24,7 +24,7 @@ const Works = () => (
             An advanced music mobile app, with multipl capabilities, such as streaming audio from
             youtube, not forgetting an awesome modern UI.
           </WorkGridItem>
-          <Box display={"flex"} flexDirection="row" marginTop={"2"}>
+          <Box display={"flex"} flexDirection="row" marginTop={"2"} justifySelf={"center"}>
             <Badge colorScheme='blue'>FLUTTER</Badge>
             <Box paddingLeft="2"> </Box>
             <Badge colorScheme='blue'>DART</Badge>
@@ -91,14 +91,14 @@ const Works = () => (
             title={<Link href="https://github.com/Anslem27/Drink-up">
               Drink Up</Link>
             }>
-            A simple water intake tracking app.(Never got to really finish it.)
+            A simple water intake tracking app.
           </WorkGridItem>
           <Box display={"flex"} flexDirection="row" marginTop={"2"}>
-            <Badge colorScheme='blue'>FLUTTER</Badge>
+            <Badge colorScheme='blue' borderRadius={5} p={0.5} m={0.5}>FLUTTER</Badge>
             <Box paddingLeft="2"> </Box>
-            <Badge colorScheme='blue'>DART</Badge>
+            <Badge colorScheme='blue' borderRadius={5} p={0.5} m={0.5} >DART</Badge>
           </Box>
-          <Badge colorScheme='yellow'>Learning component</Badge>
+          <Badge colorScheme='pink' borderRadius={5} p={0.5} m={0.5}>Learning component</Badge>
         </Section>
         <Section delay={0.3}>
           <WorkGridItem
@@ -114,9 +114,9 @@ const Works = () => (
           <Box display={"flex"} flexDirection="row" marginTop={"2"}>
             <Badge colorScheme='blue'>FLUTTER</Badge>
             <Box paddingLeft="2"> </Box>
-            <Badge colorScheme='blue'>HIVE DB</Badge>
+            <Badge colorScheme='purple'>HIVE DB</Badge>
             <Box paddingLeft="2"> </Box>
-            <Badge colorScheme='yellow'>Learning component</Badge>
+            <Badge colorScheme='pink'>Learning component</Badge>
           </Box>
         </Section>
       </SimpleGrid>
