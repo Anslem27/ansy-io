@@ -6,11 +6,14 @@ import RepoCard from './repo_card';
 const RepoView = ({ reposToDisplay }) => {
     if (Array.isArray(reposToDisplay)) {
         return <>
-            {reposToDisplay.map(repo => <div key={repo.id} >
+            {reposToDisplay.map((repo, index) => (
+                <div key={repo.id}>
+                    <RepoCard repo={repo} index={index} />
+                </div>
+            )
+            )
+            }
 
-                <RepoCard repo={repo} />
-
-            </div>)}
 
         </>
     } else {

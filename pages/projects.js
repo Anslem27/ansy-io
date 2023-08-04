@@ -20,10 +20,10 @@ const Works = () => (
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
 
         <Section>
-          <WorkGridItem id="poemtopia" title={<Link href="https://poemtopia-site.vercel.app/">
+          <WorkGridItem id="versify" title={<Link href="https://versify-site.vercel.app/">
 
-            Poemtopia</Link>} thumbnail={poemtopia}>
-            Poemtopia is a modern ebook and poem app that aims to provide users with a poetic utopia.
+            Versify</Link>} thumbnail={poemtopia}>
+            Versify is a modern ebook and poem app that aims to provide users with a poetic utopia.
             It is a place where poetry enthusiasts can explore, and be inspired by the world of poetry.
           </WorkGridItem>
           <Box display={"flex"} flexDirection="row" marginTop={"2"} justifySelf={"center"}>

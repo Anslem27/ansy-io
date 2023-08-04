@@ -1,21 +1,25 @@
 import NextLink from 'next/link'
-import { Box, Text, LinkBox, LinkOverlay, Spacer, Flex } from '@chakra-ui/react'
-import { IoLogoGithub, IoStar, IoArchiveOutline } from 'react-icons/io5'
+import { Box, Text, Flex } from '@chakra-ui/react'
+import { IoLogoGithub } from 'react-icons/io5'
 import styled from "@emotion/styled";
 
 
-export const RepoCard = ({ repo }) => (
+export const RepoCard = ({ repo, index }) => (
 
     <Box>
 
 
         <Flex justify="start" align="start" direction="row" p={3} w="100%">
-
+            <Box cursor="pointer" padding={3}>
+                <Text fontSize={35} fontWeight={"bold"} textColor={getLanguageColor(repo.language)}>
+                    {index < 9 ? `0${index + 1}` : index + 1}
+                </Text>
+            </Box>
 
             <Flex display="flex" flexDirection="column">
 
                 <NextLink href={repo.html_url}>
-                    <Text fontSize={20} fontWeight="bold">
+                    <Text fontSize={25} fontWeight="bold">
                         {repo.name}
                     </Text>
                 </NextLink>

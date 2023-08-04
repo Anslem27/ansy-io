@@ -1,10 +1,10 @@
 import { Box, Text, Link, Flex } from '@chakra-ui/react';
 import { formatDistanceToNow, parseISO } from 'date-fns';
-import Image from 'next/image';
+// import Image from 'next/image';
 import React from 'react';
 import styled from '@emotion/styled';
 
-export const MediumGridItem = ({ article }) => {
+export const MediumGridItem = ({ article, index }) => {
     const myLoader = ({ src }) => {
         return `${article.thumbnail}`;
     };
@@ -19,23 +19,16 @@ export const MediumGridItem = ({ article }) => {
     const colors = ['blue.500', 'green.500', 'purple.500', 'yellow.500'];
 
     return (
-        <Box p={5}>
-            <Flex justify="start" align="start" direction="row" p={3} w="100%">
-                <Link href={article.link} passHref>
-                    <Box cursor="pointer" padding={3}>
-                        <Image
-                            loader={myLoader}
-                            src={`${article.thumbnail}`}
-                            alt={article.title}
-                            className="grid-item-thumbnail"
-                            width={200}
-                            height={200}
-                        />
-                    </Box>
-                </Link>
-                <Link href={article.link} passHref>
+        <Box p={1}>
+            <Flex justify="start" align="start" direction="row" w="100%">
+                <Box cursor="pointer" padding={3}>
+                    <Text fontSize={35} fontWeight={"bold"} textColor={"grey"}>
+                        {index < 9 ? `0${index + 1}` : index + 1}
+                    </Text>
+                </Box>
+                <Link href={article.link} passHref style={{ textDecoration: 'none', color: 'inherit' }}>
                     <Flex display="flex" flexDirection="column">
-                        <Text mt={2} fontSize={15} fontWeight="bold">
+                        <Text mt={2} fontSize={20} fontWeight="bold">
                             {article.title}
                         </Text>
                         <Text fontSize={10}>{formattedDate}</Text>

@@ -18,7 +18,7 @@ const MediumArticles = () => {
     }, []);
 
     return (
-        <Layout title="GitHub Projects">
+        <Layout title="My Blog">
             <Container>
                 <Flex display={"flex"} flexDirection={"row"}>
                     <Heading as="h1" fontSize={22} mb={4} pr={2}>
@@ -33,7 +33,7 @@ const MediumArticles = () => {
                     </Flex>
                 ) : (
                     // If not loading, display the articles
-                    articles.map((article) => <MediumGridItem article={article} />)
+                    articles.map((article, index) => <MediumGridItem key={article.title} article={article} index={index} />)
                 )}
             </Container>
             <Divider paddingBottom={5} paddingTop={5}></Divider>

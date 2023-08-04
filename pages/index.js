@@ -144,18 +144,18 @@ const Home = () => {
               colorScheme="pink"
               leftIcon={<IoLogoGithub />}
             >
-              Poemtopia
+              Versify
             </Button></Link>
           </NextLink>
           <Box display={"flex"} flexDirection="row" alignItems={"center"}>
             <Image
-              src="https://github.com/Anslem27/poemtopia-site/blob/master/public/android-chrome-192x192.png?raw=true"
-              alt="Poemtopia logo"
+              src="https://versify-site.vercel.app/_next/image/?url=%2Flogo.png&w=128&q=75"
+              alt="Versify logo"
               className="grid-item-thumbnail"
               width={50}
               height={50}
             />
-            <Text paddingLeft={5}>Poemtopia is a modern ebook and poem app that aims to provide users with a poetic utopia. It is a place where poetry enthusiasts can explore, and be inspired by the world of poetry
+            <Text paddingLeft={5}>Versify is a modern ebook and poem app that aims to provide users with a poetic utopia. It is a place where poetry enthusiasts can explore, and be inspired by the world of poetry
             </Text>
           </Box>
         </Box>
@@ -205,9 +205,6 @@ const Home = () => {
           <Heading as="h3" variant="section-title">
             Dont get bored while your here.
           </Heading>
-          <Text>
-            Check out what
-          </Text>
           <div>
             {isLoading && (
               <Spinner size="lg" color="white" />
