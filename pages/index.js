@@ -19,6 +19,7 @@ import Image from 'next/image'
 import { GameController, Code, Pencil } from 'phosphor-react'
 import styled from "@emotion/styled";
 import React, { useState } from 'react';
+import DiscordActivityStream from '../components/discordPresence'
 
 
 export const ProfileImage = chakra(Image, {
@@ -88,6 +89,12 @@ const Home = () => {
           </Box>
         </Box>
 
+        {/* Discord Presence Section */}
+        <Heading as="h3" variant="section-title">
+          Discord Presence
+        </Heading>
+        <DiscordActivityStream />
+
         <Section delay={0.1}>
           <Heading as="h3" variant="section-title">
             A little about me
@@ -108,7 +115,7 @@ const Home = () => {
           </Paragraph>
           <Box align="center" my={4}>
             <NextLink href="/projects" passHref scroll={false} legacyBehavior>
-              <Button rightIcon={<Code />} colorScheme="pink">
+              <Button rightIcon={<Code />} background={"#05caa9"}>
                 My projects
               </Button>
             </NextLink>
@@ -134,7 +141,7 @@ const Home = () => {
         </Heading>
         <Box p={3}>
           <NextLink
-            href="https://poemtopia-site.vercel.app/"
+            href="https://versify-site.vercel.app/"
             passHref
             scroll={false}
             legacyBehavior>
@@ -182,7 +189,7 @@ const Home = () => {
         </Box>
 
         <NextLink
-          href="https://github.com/Anslem27/Anslem27.github.io"
+          href="https://anslem27.github.io/"
           passHref
           scroll={false}
           legacyBehavior>
