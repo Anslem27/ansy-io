@@ -6,6 +6,7 @@ import { DiscordLogo } from 'phosphor-react';
 
 
 const DiscordActivityStream = () => {
+    /* Discord user id */
     const lanyard = useLanyard({
         userId: "878728452155539537",
     });

@@ -21,7 +21,7 @@ const Work = () => (
         Gem Music <Badge>2022</Badge>
       </Title>
       <P>
-      An awesome modern music player, with youtube audio streaming functionality
+        An awesome modern music player, with youtube audio streaming functionality
       </P>
       <List ml={4} my={4}>
         <ListItem>
@@ -32,11 +32,11 @@ const Work = () => (
         </ListItem>
         <ListItem>
           <Meta>Platform</Meta>
-          <span>iOS/Android</span>
+          <span>Web</span>
         </ListItem>
         <ListItem>
           <Meta>Framework</Meta>
-          <span>Flutter</span>
+          <span>Next js</span>
         </ListItem>
         <ListItem>
           <Meta>Github</Meta>

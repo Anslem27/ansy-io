@@ -9,7 +9,7 @@ import anslemio from '../public/images/projects/ans-io.png'
 import flutterhiveapp from '../public/images/projects/hive-app.png'
 import drinkup from '../public/images/projects/d-up.jpg'
 import flutterBlogDashBoard from '../public/images/projects/blog_dashboard.jpeg'
-
+import portfolio from '../public/images/projects/portfolio.png'
 const Works = () => (
   <Layout title="Projects">
     <Container>
@@ -33,6 +33,19 @@ const Works = () => (
           </Box>
         </Section>
 
+        <Section>
+          <WorkGridItem id="portfolio" title={<Link href="https://ansy-io.vercel.app/">
+
+            ansy.io</Link>} thumbnail={portfolio}>
+            This is my portfolio website, made with next.js
+          </WorkGridItem>
+          <Box display={"flex"} flexDirection="row" marginTop={"2"} justifySelf={"center"}>
+            <Badge colorScheme='blue' borderRadius={8}>Next js</Badge>
+            <Box paddingLeft="2"> </Box>
+            <Badge colorScheme='blue' borderRadius={8}>JAVASCRIPT</Badge>
+          </Box>
+        </Section>
+
 
         <Section>
           <WorkGridItem id="gem" title={<Link href="https://gem-one.vercel.app/">
@@ -42,9 +55,9 @@ const Works = () => (
             youtube, not forgetting an awesome modern UI.
           </WorkGridItem>
           <Box display={"flex"} flexDirection="row" marginTop={"2"} justifySelf={"center"}>
-            <Badge colorScheme='blue' borderRadius={8}>FLUTTER</Badge>
+            <Badge colorScheme='blue' borderRadius={8}>Next js</Badge>
             <Box paddingLeft="2"> </Box>
-            <Badge colorScheme='blue' borderRadius={8}>DART</Badge>
+            <Badge colorScheme='blue' borderRadius={8}>TYPESCRIPT</Badge>
           </Box>
         </Section>
         <Section>

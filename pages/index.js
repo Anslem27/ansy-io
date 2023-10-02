@@ -100,14 +100,14 @@ const Home = () => {
             A little about me
           </Heading>
           <Paragraph>
-            Anslem is an undergraduate and an aspiring software developer based in Kampala Uganda with a
-            passion for building digital stuff and amazing Ui's. He has a special zeal
+            I am an undergraduate and an aspiring software developer with a
+            passion for building digital stuff and amazing Ui's. I have a special zeal
             for all things `frontend`, from planning and designing all from the basics as a
-            way to solving real-life problems with code, and making it look great all-together. When not online, he loves
-            listening to some soothing indie alternate jams. Currently, he is learning Next js and intermediate software
+            way to solving real-life problems with code, and making it look great all-together. When not online, i also love
+            listening to some soothing indie alternate jams. A'm currently learning Next js and intermediate software
             development techniques in next js as well as advancing his skills in mobile app development.
             {' '}
-            . He also has passion for writing articles primarily about coding and lots of other stuff on &quot;
+            . I also have a passion for writing articles primarily about coding and lots of other stuff on &quot;
             <NextLink href="https://medium.com/@anslemAnsy" passHref legacyBehavior>
               <Link target="_blank">medium</Link>
             </NextLink>
